@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Кристина Круглова](https://up.htmlacademy.ru/htmlcss/32/user/1390101).
-* Наставник: `Неизвестно`.
+* Наставник: [Артур Трифонов] (https://htmlacademy.ru/profile/wrgraff).
 
 ---
 
