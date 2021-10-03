@@ -48,9 +48,10 @@
     </nav>
   </header>
 
-  <main>
+  <main class="page-main">
     <section class="catalog">
       <h2 class="visually-hidden">Фильтры выбора гостиниц</h2>
+      <form class="catalog-filter" action="" method="get">
       <fieldset class="catalog-filter-group">
         <legend class="catalog-filter-title">Инфраструктура:</legend>
         <ul class="catalog-filter-list">
@@ -116,7 +117,6 @@
           до
           <input class="catalog-filter-input" type="number" name="max-price">
       </fieldset>
-      <form class="catalog-filter" action="" method="get">
         <button class="button" type="submit">Применить</button>
         <button class="button" type="submit">Сбросить</button>
       </form>
@@ -154,7 +154,7 @@
             <b class="hotel-card-price">от 4000 ₽ </b>
             <a href="#" class="hotel-card-button">Подробнее</a>
             <a href="#" class="hotel-card-button-blue ">В избранное</a>
-            <img class="hotel-rating-star" src="" alt="">
+            <span class="visually-hidden">4 звезды</span>
             <p>Рейтинг: 8,5</p>
           </li>
           <li class="hotel-card">
@@ -166,7 +166,7 @@
             <b class="hotel-card-price">от 3000 ₽ </b>
             <a href="#" class="hotel-card-button">Подробнее</a>
             <a href="#" class="hotel-card-button-blue">В избранное</a>
-            <img class="hotel-rating-star" src="" alt="">
+            <span class="visually-hidden">3 звезды</span>
             <p>Рейтинг: 8,9</p>
           </li>
           <li class="hotel-card">
@@ -178,7 +178,7 @@
             <b class="hotel-card-price">от 2000 ₽ </b>
             <a href="#" class="hotel-card-button">Подробнее</a>
             <a href="#" class="hotel-card-button-green">В избранное</a>
-            <img class="hotel-rating-star" src="" alt="">
+            <span class="visually-hidden">2 звезды</span>
             <p>Рейтинг: 9,2</p>
           </li>
           <li class="hotel-card">
@@ -190,7 +190,7 @@
             <b class="hotel-card-price">от 3000 ₽ </b>
             <a href="#" class="hotel-card-button">Подробнее</a>
             <a href="#" class="hotel-card-button-blue">В избранное</a>
-            <img class="hotel-rating-star" src="" alt="">
+            <span class="visually-hidden">2 звезды</span>
             <p>Рейтинг: 9,2</p>
           </li>
         </ul>
