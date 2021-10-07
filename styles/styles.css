@@ -1,0 +1,53 @@
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/ptsans-400.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/ptsans-700.woff2") format("woff2");
+  font-display: swap;
+}
+
+body {
+  font-family: "PT Sans", sans-serif;
+  font-size: 18px;
+  line-height: 21px;
+  color: basic/black #000000
+  background-color: #FFFFFF;
+}
+
+.page-header {
+  color: #000000;
+  background: #FFFFFF;
+}
+
+.main-index {
+  background-image: url("../image/sedona.jpg");
+  background-color: #FFFFFF;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+}
+
+.mailing {
+  background-image: url("../image/background-masege.png");
+  background-color: #FFFFFF;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+}
+
+/* catalog */
+
+.catalog {
+  background-image: url("../image/catalog-background\ 1.png");
+  background-color: #FFFFFF;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+}
+
+
