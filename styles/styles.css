@@ -38,8 +38,8 @@ body {
 }
 
 .main-index {
-  background-image: url("../image/sedona.jpg");
-  background-color: #FFFFFF;
+  background-image: url("../image/background/sedona.jpg");
+  background-color: #000000;
   background-size: 100% auto;
   background-repeat: no-repeat;
 }
@@ -48,9 +48,11 @@ body {
   text-align: center;
 }
 
+
+
 .mailing {
-  background-image: url("../image/background-masege.png");
-  background-color: #FFFFFF;
+  background-image: url("../image/background/background.jpg");
+  background-color: #000000;
   background-size: 100% auto;
   background-repeat: no-repeat;
 }
@@ -60,8 +62,8 @@ body {
 /* catalog */
 
 .catalog {
-  background-image: url("../image/catalog-background.png");
-  background-color: #FFFFFF;
+  background-image: url("../image/background/catalog-background.jpg");
+  background-color: #000000;
   background-size: 100% auto;
   background-repeat: no-repeat;
 }
