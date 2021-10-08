@@ -31,31 +31,178 @@ body {
   font-family: PT Sans, sans-serif;
   font-size: 20px;
   line-height: 26px;
+  font-weight: bold;
   color: #000000;
   background-color: #FFFFFF;
+  text-align: center;
   text-decoration: none;
+}
+
+.navigation-link-user {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 21px;
+  text-align: center;
   text-transform: uppercase;
+  color: #FFFFFF;
+  text-decoration: none;
+  background-color: #756257;
+  border-radius: 4px;
+}
+
+.logo-img {
+  vertical-align: middle;
 }
 
 .main-index {
   background-image: url("../image/background/sedona.jpg");
-  background-color: #000000;
+  background-color: #FFFFFF;
   background-size: 100% auto;
   background-repeat: no-repeat;
 }
 
-.advantages-list {
+.slogan {
+  line-height: 36px;
+  font-weight: 700;
+  font-size: 30px;
+  text-align: center;
+  color: #000000;
+  background-color: #FFFFFF;
+  text-transform: uppercase;
+}
+
+.text {
+  line-height: 36px;
+  font-weight: 400;
+  font-size: 22px;
+  text-align: center;
+  color: #000000;
+  background-color: #FFFFFF;
+}
+
+.advantages-title {
+  line-height: 28px;
+  font-size: 24px;
+  text-align: center;
+  color: #FFFFFF;
+  text-transform: uppercase;
+}
+
+.advantages-priority {
+  background-color: #83B3D3;
   text-align: center;
 }
 
+.advantages-description {
+  line-height: 21px;
+  font-size: 18px;
+  text-align: center;
+  color: #FFFFFF;
+}
 
+.features-item {
+  background-color: #rgba(131, 179, 211, 0, 12);
+  text-align: center;
+}
+
+.features-item:nth-child(2) {
+  background-color: #FFFFFF;
+}
+
+.features-title {
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 28px;
+  text-transform: uppercase;
+}
+
+.advantages-item {
+  background-color: rgba(131, 179, 211, 0, 12);
+}
+
+.advantages-item:nth-child(2) {
+  background-color: rgba(131, 179, 211, 0.2);
+}
+
+.search {
+  text-align: center;
+  color: #000000;
+  background-color: #FFFFFF;
+}
+
+.search-title {
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.search-text {
+  font-size: 22px;
+  line-height: 26px;
+  color: #333333;
+}
+
+.search-link {
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 36px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  text-decoration: none;
+  background-color: #756257;
+  border-radius: 10px;
+}
 
 .mailing {
   background-image: url("../image/background/background.jpg");
   background-color: #000000;
+  color: #FFFFFF;
   background-size: 100% auto;
   background-repeat: no-repeat;
+  text-align: center;
 }
+
+.mailing-title {
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+.mailing-text {
+  font-size: 22px;
+  line-height: 26px;
+  color: #FFFFFF;
+}
+
+.button-mailing-button {
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 26px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  text-decoration: none;
+  background-color: #83B3D3;
+  border-radius: 0px 10px 10px 0px;
+  align-items: center;
+}
+
+.footer-social-item {
+  background-color: #83B3D3;
+  text-decoration: underline;
+}
+
+.page-footer-contacts {
+  font-size: 40px;
+  line-height: 40px;
+  text-align: center;
+  text-decoration: underline;
+}
+
 
 
 
