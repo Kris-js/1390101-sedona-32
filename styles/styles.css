@@ -14,7 +14,15 @@
   font-display: swap;
 }
 
+html {
+  height: 100%;
+}
+
 body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 21px;
@@ -27,6 +35,18 @@ body {
   background: #ffffff;
 }
 
+.navigation {
+  display: flex;
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.navigation-list {
+  width: 350px;
+  margin: 0;
+  padding: 0;
+}
+
 .navigation-link {
   font-size: 20px;
   line-height: 26px;
@@ -36,12 +56,32 @@ body {
   text-decoration: none;
 }
 
+.navigation-list-user {
+  max-width: 250px;
+  margin-left: auto;
+}
+
+.logo {
+  margin: auto;
+}
+
+.main-container {
+  width: 1200px;
+  margin: 0 auto;
+  flex-grow: 1;
+}
+
 .welcome {
   background-image: url("../image/background/sedona.jpg");
   background-color: #83b3d3;
   color: #ffffff;
   background-size: 100% auto;
   background-repeat: no-repeat;
+}
+
+.welcome-picture {
+  display: block;
+  margin: 0 auto;
 }
 
 .slogan {
@@ -61,6 +101,11 @@ body {
   text-align: center;
 }
 
+.advantages-list {
+  margin: 0;
+  padding: 0;
+}
+
 .advantages-title {
   line-height: 28px;
   font-size: 24px;
@@ -70,9 +115,34 @@ body {
   text-transform: uppercase;
 }
 
+.advantages-title-picture {
+  line-height: 28px;
+  font-size: 24px;
+  text-align: center;
+  font-weight: bold;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.advantages-item-picture {
+  display: flex;
+  justify-content: space-between;
+}
+
 .advantages-item-container {
   background-color: #83b3d3;
   text-align: center;
+  width: 400px;
+  color: #ffffff;
+  margin: 0 auto;
+}
+
+.advantages-description-picture {
+  line-height: 21px;
+  font-size: 18px;
+  color: #ffffff;
+  text-align: center;
+  width: 400px;
 }
 
 .advantages-description {
@@ -82,8 +152,15 @@ body {
   text-align: center;
 }
 
+.features-list {
+  display: flex;
+  justify-content: space-between;
+}
+
 .features-item {
   background-color: rgba(131, 179, 211, 0.12);
+  width: 400px;
+  text-align: center;
 }
 
 .features-item:nth-child(even) {
@@ -97,8 +174,15 @@ body {
   text-transform: uppercase;
 }
 
+.advantages-container {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+
 .advantages-item {
   background-color: rgba(131, 179, 211, 0.12);
+  width: 400px;
 }
 
 .advantages-item:nth-child(even) {
@@ -147,6 +231,18 @@ body {
   color: #ffffff;
 }
 
+.page-footer-container {
+  display: flex;
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-social {
+  display: flex;
+  width: 115px;
+  margin-right: 72px;
+}
+
 .footer-social-item {
   background-color: #83b3d3;
 }
@@ -155,6 +251,11 @@ body {
   font-size: 40px;
   line-height: 40px;
   text-align: center;
+}
+
+.page-footer-htmlacademy {
+  width: 115px;
+  margin-left: auto;
 }
 
 /* button */
