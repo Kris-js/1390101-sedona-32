@@ -251,11 +251,12 @@ body {
   font-size: 40px;
   line-height: 40px;
   text-align: center;
+  margin: auto;
 }
 
 .page-footer-htmlacademy {
   width: 115px;
-  margin-left: auto;
+  margin-left: 72px;
 }
 
 /* button */
