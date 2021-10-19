@@ -14,7 +14,16 @@
   font-display: swap;
 }
 
-body {
+html {
+  height: 100%;
+}
+
+.body-container {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  width: 1200px;
+  min-height: 100%;
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 21px;
@@ -27,6 +36,18 @@ body {
   background: #ffffff;
 }
 
+.navigation {
+  display: flex;
+}
+
+.navigation-list {
+  display: flex;
+  flex-grow: 1;
+  width: 350px;
+  margin: 0;
+  padding: 0;
+}
+
 .navigation-link {
   font-size: 20px;
   line-height: 26px;
@@ -36,12 +57,32 @@ body {
   text-decoration: none;
 }
 
+.navigation-list-user {
+  display: flex;
+  justify-content: flex-end;
+  flex-grow: 1;
+  width: 350px;
+  margin: 0;
+  padding: 0;
+}
+
+.main-container {
+  width: 1200px;
+  margin: 0 auto;
+  flex-grow: 1;
+}
+
 .welcome {
   background-image: url("../image/background/sedona.jpg");
   background-color: #83b3d3;
   color: #ffffff;
   background-size: 100% auto;
   background-repeat: no-repeat;
+}
+
+.welcome-picture {
+  display: block;
+  margin: 0 auto;
 }
 
 .slogan {
@@ -61,29 +102,41 @@ body {
   text-align: center;
 }
 
+.advantages-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
 .advantages-title {
   line-height: 28px;
   font-size: 24px;
-  text-align: center;
   font-weight: bold;
-  color: #000000;
   text-transform: uppercase;
 }
 
-.advantages-item-container {
+.advantages-item-picture {
+  display: flex;
   background-color: #83b3d3;
-  text-align: center;
+  color: #ffffff;
 }
 
 .advantages-description {
   line-height: 21px;
   font-size: 18px;
-  color: #000000;
-  text-align: center;
+}
+
+.features-list {
+  display: flex;
+  margin: 0;
+  padding: 0;
 }
 
 .features-item {
   background-color: rgba(131, 179, 211, 0.12);
+  width: 400px;
 }
 
 .features-item:nth-child(even) {
@@ -98,7 +151,10 @@ body {
 }
 
 .advantages-item {
+  margin: 0;
+  padding: 0;
   background-color: rgba(131, 179, 211, 0.12);
+  width: 400px;
 }
 
 .advantages-item:nth-child(even) {
@@ -147,6 +203,23 @@ body {
   color: #ffffff;
 }
 
+.page-footer {
+  display: flex;
+}
+
+.footer-social {
+  flex-grow: 1;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-social-list {
+  display: flex;
+  width: 150px;
+  margin: 0;
+  padding: 0;
+}
+
 .footer-social-item {
   background-color: #83b3d3;
 }
@@ -154,7 +227,13 @@ body {
 .page-footer-contacts {
   font-size: 40px;
   line-height: 40px;
-  text-align: center;
+}
+
+.page-footer-developer {
+  display: flex;
+  flex-grow: 1;
+  justify-content: flex-end;
+  width: 150px;
 }
 
 /* button */
@@ -287,9 +366,4 @@ body {
   line-height: 23px;
   color: #333333;
 }
-
-.select-control {
-  border: 2px solid #e6e6e6;
-  box-sizing: border-box;
-  border-radius: 4px;
 }

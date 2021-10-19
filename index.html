@@ -7,8 +7,7 @@
   <link rel="stylesheet" href="styles/styles.css">
 </head>
 
-<body>
-
+<body class="body-container">
   <header class="page-header">
     <nav class="navigation">
       <ul class="navigation-list">
@@ -49,7 +48,7 @@
     </nav>
   </header>
 
-  <main class="main-index">
+  <main class="main-container">
     <h1 class="visually-hidden">Седона</h1>
     <div class="welcome">
       <img class="welcome-picture" src="./image/welcome.svg" width="458" height="352"
@@ -61,38 +60,34 @@
       <p class="text">Рассмотрим 5 причин, по которым Седона круче, чем Гранд-Каньон!</p>
       <ul class="advantages-list">
         <li class="advantages-item-picture">
-          <div class="advantages-item-container">
-            <h3 class="advantages-title">Настоящий городок</h3>
-            <p class="advantages-description">
-              <spain>— №1 — </spain>
-              Седона — не аттракцион для туристов, там течёт своя жизнь
-            </p>
-          </div>
-          <img src="./image/index-1.jpg" width="800" height="384" alt="городок">
-          <ul class="features-list">
-            <li class="features-item">
-              <h4 class="features-title">Жильё</h4>
-              <p class="features-description">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
-            </li>
-            <li class="features-item">
-              <h4 class="features-title">Еда</h4>
-              <p class="features-description">Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь!</p>
-            </li>
-            <li class="features-item">
-              <h4 class="features-title">Сувениры</h4>
-              <p class="features-description">Не только китайского, но и настоящего местного производства!</p>
-            </li>
-          </ul>
+          <h3 class="advantages-title">Настоящий городок</h3>
+          <p class="advantages-description">
+            <spain>— №1 — </spain>
+            Седона — не аттракцион для туристов, там течёт своя жизнь
+          </p>
+          <img class="advantages-picture" src="./image/index-1.jpg" width="800" height="384" alt="городок">
         </li>
-        <li class="advantages-item advantages-item-picture">
-          <img src="./image/index-2.jpg" width="800" height="384" alt="мост">
-          <div class="advantages-item-container">
-            <h3 class="advantages-title"> Там есть мост дьявола</h3>
-            <p class="advantages-description">
-              <span>— №2 —</span>
-              Да, по нему можно пройти! Если вы осмелитесь, разумеется
-            </p>
-          </div>
+        <ul class="features-list">
+          <li class="features-item">
+            <h4 class="features-title">Жильё</h4>
+            <p class="features-description">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
+          </li>
+          <li class="features-item">
+            <h4 class="features-title">Еда</h4>
+            <p class="features-description">Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь!</p>
+          </li>
+          <li class="features-item">
+            <h4 class="features-title">Сувениры</h4>
+            <p class="features-description">Не только китайского, но и настоящего местного производства!</p>
+          </li>
+        </ul>
+        <li class="advantages-item-picture">
+          <img class="advantages-picture" src="./image/index-2.jpg" width="800" height="384" alt="мост">
+          <h3 class="advantages-title"> Там есть мост дьявола</h3>
+          <p class="advantages-description">
+            <span>— №2 —</span>
+            Да, по нему можно пройти! Если вы осмелитесь, разумеется
+          </p>
         </li>
         <li class="advantages-item">
           <h3 class="advantages-title"> Небольшая площадь</h3>
@@ -127,8 +122,7 @@
         <p class="mailing-text"> Только полезная информация и никакого спама,честное бойскаутское!</p>
         <form class="mailing-form" action="" method="post">
           <label class="visually-hidden" for="mailing-email">Email</label>
-          <input class="field" placeholder="email@exemple.com" type="email" name="mailing-email" id="mailing-email"
-            required>
+          <input class="field" placeholder="Ваш e-mail" type="email" name="mailing-email" id="mailing-email" required>
           <button class="button button-large" type="submit">Подписаться</button>
         </form>
       </section>
@@ -156,7 +150,7 @@
       </ul>
     </section>
     <a class="page-footer-contacts" href="tel:+78128121212">+7 (812) 812-12-12</a>
-    <a class="page-footer-htmlacademy" href="https://htmlacademy.ru/">
+    <a class="page-footer-developer" href="https://htmlacademy.ru/">
       <span class="visually-hidden">Разработчик: </span>
       .html academy
     </a>
