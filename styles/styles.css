@@ -291,15 +291,40 @@ html {
 }
 
 .breadcrumbs {
+  display: flex;
   color: #ffffff;
   font-size: 16px;
   line-height: 21px;
+}
+
+.catalog {
+  display: flex;
+}
+
+.catalog-filter {
+  display: flex;
+  width: 160px;
 }
 
 .catalog-filter-title {
   font-size: 20px;
   font-weight: bold;
   line-height: 26px;
+}
+
+.catalog-filter-group {
+  display: flex;
+  width: 150px;
+  margin: 0;
+  padding: 0;
+}
+
+.catalog-filter-price {
+  width: 290px;
+}
+
+.catalog-search-container {
+  width: 160px;
 }
 
 .control-label {
@@ -315,6 +340,16 @@ html {
   font-weight: bold;
   text-transform: uppercase;
   color: #000000;
+}
+
+.hotels-sorting {
+  display: flex;
+}
+
+.hotels-sorting-title {
+  font-size: 30px;
+  line-height: 39px;
+  font-weight: bold;
 }
 
 .select-control {
@@ -365,5 +400,4 @@ html {
   font-size: 18px;
   line-height: 23px;
   color: #333333;
-}
 }
