@@ -16,6 +16,7 @@
 
 html {
   height: 100%;
+  background-color: #e5e5e5;
 }
 
 .body-container {
@@ -280,7 +281,7 @@ html {
 }
 
 .page-main {
-  background-color: #e5e5e5;
+  background-color: #ffffff;
   color: #000000;
 }
 
@@ -298,12 +299,12 @@ html {
 }
 
 .catalog {
-  display: flex;
+  padding: 0;
+  margin: 0;
 }
 
 .catalog-filter {
   display: flex;
-  width: 160px;
 }
 
 .catalog-filter-title {
@@ -313,18 +314,18 @@ html {
 }
 
 .catalog-filter-group {
-  display: flex;
   width: 150px;
-  margin: 0;
-  padding: 0;
+  margin-left: 71px;
 }
 
 .catalog-filter-price {
   width: 290px;
+  margin-left: 216px;
 }
 
 .catalog-search-container {
   width: 160px;
+  margin-right: 72px;
 }
 
 .control-label {
