@@ -92,6 +92,7 @@ html {
   display: block;
   margin: 0 auto;
   padding-top: 51.4px;
+  padding-bottom: 83.03px;
 }
 
 .slogan {
@@ -138,11 +139,15 @@ html {
   color: #ffffff;
 }
 
+.advantages-item-picture-container {
+ /*не знаю как расставить в колонну. flex-direction: column не работает*/
+}
+
 .advantages-description {
   line-height: 21px;
   font-size: 18px;
   margin: 0;
-  padding: 25px 90px 77px;
+  padding: 25px 90px;
 }
 
 .features-list {
@@ -340,6 +345,9 @@ html {
 }
 
 .main-header-title {
+  margin: 0;
+  padding-top: 35px;
+  padding-bottom: 5px;
   font-size: 60px;
   font-weight: bold;
   line-height: 78px;
@@ -347,9 +355,11 @@ html {
 
 .breadcrumbs {
   display: flex;
+  margin: 0;
   color: #ffffff;
   font-size: 16px;
   line-height: 21px;
+  list-style-type: none;
 }
 
 .catalog {
@@ -399,12 +409,16 @@ html {
 
 .hotels-sorting {
   display: flex;
+  margin: 0;
 }
 
 .hotels-sorting-title {
   font-size: 30px;
   line-height: 39px;
   font-weight: bold;
+  margin-top: 50px;
+  margin-bottom: 45px;
+  margin-right: 192px;
 }
 
 .select-control {
@@ -412,6 +426,29 @@ html {
   line-height: 23px;
   border: 2px solid #e6e6e6;
   border-radius: 4px;
+  margin-top: 44px;
+  margin-bottom: 42px;
+  margin-right: 81px;
+}
+
+.button-sorting {
+  display: flex;
+  margin-right: auto;
+  width: 48px;
+  height: 48px;
+}
+
+.button-sorting-active {
+  display: flex;
+  margin-right: auto;
+  width: 48px;
+  height: 48px;
+}
+
+.hotel-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 .hotel-card-title {
@@ -433,13 +470,29 @@ html {
   color: #333333;
 }
 
+.pagination {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
 .pagination-link {
+  display: block;
+  box-sizing: border-box;
+  width: 55px;
+  height: 55px;
   font-size: 20px;
   line-height: 26px;
   font-weight: bold;
   color: #ffffff;
   background-color: #83b3d3;
   border-radius: 4px;
+  text-decoration: none;
+}
+
+.pagination-item:not(:last-child) {
+  margin-right: 7px;
 }
 
 .pagination-current {
@@ -452,6 +505,7 @@ html {
 }
 
 .page-type {
+  display: flex;
   font-size: 18px;
   line-height: 23px;
   color: #333333;
