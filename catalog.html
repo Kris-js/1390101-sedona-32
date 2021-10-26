@@ -225,43 +225,43 @@
           <p class="hotel-card-rating">Рейтинг: 9,2</p>
         </li>
       </ul>
-
       <button class="button button-large" type="button">Загрузить ещё</button>
-      <ul class="pagination">
-        <li class="pagination-item">
-          <a class="pagination-link pagination-current">1</a>
-        </li>
-        <li class="pagination-item">
-          <a class="pagination-link" href="#">2</a>
-        </li>
-        <li class="pagination-item">
-          <a class="pagination-link" href="#">3</a>
-        </li>
-        <li class="pagination-item">
-          <a class="pagination-link" href="#">4</a>
-        </li>
-        <li class="pagination-item">
-          <a class="pagination-link pagination-next" href="#">
-            <span class="visually-hidden">Остальные страницы</span>
-          </a>
-        <li class="pagination-item">
-          <a class="pagination-link" href="#">10</a>
-        </li>
-      </ul>
-
-      <form class="page-type">
-        <label class="page-type-type" for="page-type">Гостиниц на странице:</label>
-        <select class="select-control" id="page-type" name="page-type">
-          <option value="4">4</option>
-          <option value="16">16</option>
-          <option value="32">32</option>
-        </select>
-      </form>
+      <div class="pagination-container">
+        <ul class="pagination">
+          <li class="pagination-item">
+            <a class="pagination-link pagination-current">1</a>
+          </li>
+          <li class="pagination-item">
+            <a class="pagination-link" href="#">2</a>
+          </li>
+          <li class="pagination-item">
+            <a class="pagination-link" href="#">3</a>
+          </li>
+          <li class="pagination-item">
+            <a class="pagination-link" href="#">4</a>
+          </li>
+          <li class="pagination-item">
+            <a class="pagination-link pagination-next" href="#">
+              <span class="visually-hidden">Остальные страницы</span>
+            </a>
+          <li class="pagination-item">
+            <a class="pagination-link" href="#">10</a>
+          </li>
+        </ul>
+        <form class="page-type">
+          <label class="page-type-type" for="page-type">Гостиниц на странице:</label>
+          <select class="select-control" id="page-type" name="page-type">
+            <option value="4">4</option>
+            <option value="16">16</option>
+            <option value="32">32</option>
+          </select>
+        </form>
+      </div>
     </section>
 
-    <section class="mailing">
-      <h2 class="mailing-title">Подпишитесь на рассылку</h2>
-      <p class="mailing-text"> Только полезная информация и никакого спама,честное бойскаутское!</p>
+    <section class="mailing-catalog">
+      <h2 class="mailing-title catalog-mail">Подпишитесь на рассылку</h2>
+      <p class="mailing-text catalog-mail"> Только полезная информация и никакого спама,честное бойскаутское!</p>
       <form class="mailing-form" action="" method="post">
         <label class="visually-hidden" for="mailing-email">Email</label>
         <input class="field" placeholder="Ваш e-mail" type="email" name="mailing-email" id="mailing-email" required>
