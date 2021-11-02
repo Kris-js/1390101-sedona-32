@@ -450,9 +450,17 @@ html {
 }
 
 .hotel-list {
+  display: grid;
   list-style-type: none;
   margin: 0;
   padding: 0;
+}
+
+.hotel-card {
+  display: grid;
+  grid-template-rows: 31px 23px 37px;
+  grid-template-columns: 180px 319px 160px;
+  gap: 30px;
 }
 
 .hotel-card-title {
@@ -460,18 +468,41 @@ html {
   line-height: 31px;
   font-weight: bold;
   color: #000000;
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.hotel-card-image {
+  display: grid;
+  grid-row: 1 / 3;
+  grid-column: 1;
 }
 
 .hotel-card-desc {
   font-size: 18px;
   line-height: 23px;
   color: #333333;
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.button button-blue
+.button button-secondary {
+  grid-column: 2;
+  grid-row: 3;
 }
 
 .hotel-card-rating {
   font-size: 16px;
   line-height: 21px;
   color: #333333;
+  grid-column: 3;
+  grid-row: 1;
+}
+
+.stars {
+  grid-column: 3;
+  grid-row: 3;
 }
 
 .pagination-container {
