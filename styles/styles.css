@@ -63,7 +63,7 @@ html {
   flex-grow: 1;
   width: 350px;
   margin: 0;
-  padding: 0;
+  padding-left: 56px;
   list-style-type: none;
   flex-wrap: wrap;
 }
@@ -83,11 +83,13 @@ html {
   display: flex;
   justify-content: flex-end;
   flex-grow: 1;
+  align-items: center;
   width: 350px;
   margin: 0;
-  padding: 0;
+  padding-right: 72px;
   list-style-type: none;
   flex-wrap: wrap;
+
 }
 
 .main-container {
@@ -247,14 +249,12 @@ html {
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
-  color: #ffffff;
 }
 
 .mailing-text {
   margin-bottom: 26px;
   font-size: 22px;
   line-height: 26px;
-  color: #ffffff;
 }
 
 .page-footer {
@@ -269,7 +269,7 @@ html {
 }
 
 .footer-social-list {
-  display: block;
+  display: flex;
   margin: 0;
   padding: 50px 100px 53px 72px;
   list-style-type: none;
@@ -341,6 +341,7 @@ html {
   background-repeat: no-repeat;
   color: #ffffff;
   background-size: cover;
+  padding: 34px 72px 83px 72px;
 }
 
 .page-main {
@@ -383,7 +384,6 @@ html {
 
 .catalog-filter-group {
   width: 150px;
-  margin-left: 71px;
 }
 
 .catalog-filter-price {
@@ -449,6 +449,11 @@ html {
   height: 48px;
 }
 
+.hotel-card-section {
+  padding-left: 72px;
+  padding-right: 72px;
+}
+
 .hotel-list {
   display: grid;
   list-style-type: none;
@@ -458,36 +463,41 @@ html {
 
 .hotel-card {
   display: grid;
-  grid-template-rows: 31px 23px 37px;
-  grid-template-columns: 180px 319px 160px;
-  gap: 30px;
+  grid-template-rows: min-content 1fr min-content;
+  grid-template-columns: 180px 1fr 160px;
+  column-gap: 36px;
+  padding-top: 31px;
+  padding-bottom: 30px;
+}
+
+.hotel-card-title-link {
+  color: #000000;
+  grid-column: 2;
+  grid-row: 1;
 }
 
 .hotel-card-title {
   font-size: 24px;
   line-height: 31px;
   font-weight: bold;
-  color: #000000;
-  grid-column: 2;
-  grid-row: 1;
+  margin: 0;
 }
 
-.hotel-card-image {
-  display: grid;
-  grid-row: 1 / 3;
+.hotel-card-image-link {
+  grid-row: 1 / 4;
   grid-column: 1;
 }
 
-.hotel-card-desc {
+.hotel-card-description {
   font-size: 18px;
   line-height: 23px;
   color: #333333;
   grid-column: 2;
   grid-row: 2;
+  margin: 0;
 }
 
-.button button-blue
-.button button-secondary {
+.hotel-card-buttons {
   grid-column: 2;
   grid-row: 3;
 }
@@ -497,12 +507,13 @@ html {
   line-height: 21px;
   color: #333333;
   grid-column: 3;
-  grid-row: 1;
+  grid-row: 3;
+  margin: 0;
 }
 
 .stars {
   grid-column: 3;
-  grid-row: 3;
+  grid-row: 1;
 }
 
 .pagination-container {
@@ -554,7 +565,8 @@ html {
   margin-left: auto;
 }
 
-.mailing-catalog {
+.mailing-blank {
   background-color: #ffffff;
   color: #000000;
+  background-image: none;
 }
