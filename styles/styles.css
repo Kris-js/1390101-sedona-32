@@ -258,21 +258,26 @@ html {
 }
 
 .page-footer {
-  display: flex;
+  display: grid;
+  grid-template-rows: min-content;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding-top: 40px;
+  padding-bottom: 30px;
+  padding-left: 72px;
+  padding-right: 45px;
 }
 
 .footer-social {
-  display: flex;
-  flex-grow: 1;
-  margin: 0;
-  flex-wrap: wrap;
+  grid-column: 1;
+  grid-row: 1;
 }
 
 .footer-social-list {
   display: flex;
-  margin: 0;
-  padding: 50px 100px 53px 72px;
   list-style-type: none;
+  margin: 0;
+  align-items: center;
+  justify-content: start;
 }
 
 .footer-social-item {
@@ -286,18 +291,12 @@ html {
   font-size: 40px;
   line-height: 40px;
   margin: 0;
-  padding-top: 40px;
-  padding-bottom: 30px;
 }
 
 .page-footer-developer {
-  display: flex;
-  flex-grow: 1;
-  justify-content: flex-end;
-  width: 150px;
-  margin: 0;
-  padding-top: 42px;
-  padding-bottom: 45px;
+  align-self: center;
+  justify-self: right;
+
 }
 
 /* button */
@@ -413,16 +412,22 @@ html {
 
 .hotels-sorting {
   display: flex;
-  margin: 0;
+  padding: 50px 72px 42px 71px;
 }
 
 .hotels-sorting-title {
+  display: flex;
+  align-items: center;
   font-size: 30px;
   line-height: 39px;
   font-weight: bold;
-  margin-top: 50px;
-  margin-bottom: 45px;
-  margin-right: 192px;
+  margin: 0;
+}
+
+.sorting-type {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 .select-control {
@@ -430,21 +435,22 @@ html {
   line-height: 23px;
   border: 2px solid #e6e6e6;
   border-radius: 4px;
-  margin-top: 44px;
-  margin-bottom: 42px;
-  margin-right: 81px;
 }
 
 .button-sorting {
   display: flex;
-  margin-right: auto;
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-right: 8px;
   width: 48px;
   height: 48px;
 }
 
 .button-sorting-active {
   display: flex;
-  margin-right: auto;
+  justify-content: flex-end;
+  align-self: center;
   width: 48px;
   height: 48px;
 }
@@ -516,10 +522,13 @@ html {
   grid-row: 1;
 }
 
+.button-loading {
+  margin: auto;
+}
+
 .pagination-container {
   display: flex;
-  margin-top: 31px;
-  margin-bottom: 89px;
+  padding-top: 31px;
 }
 
 .pagination {
@@ -527,6 +536,7 @@ html {
   margin: 0;
   padding: 0;
   list-style-type: none;
+  align-items: center;
 }
 
 .pagination-link {
@@ -563,6 +573,17 @@ html {
   line-height: 23px;
   color: #333333;
   margin-left: auto;
+  align-self: center;
+}
+
+.select-control-type {
+  font-size: 18px;
+  line-height: 23px;
+  border: 2px solid #e6e6e6;
+  border-radius: 4px;
+  width: 160px;
+  height: 48px;
+  margin-left: 51px;
 }
 
 .mailing-blank {

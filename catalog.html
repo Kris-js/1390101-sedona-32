@@ -189,49 +189,69 @@
           <p class="hotel-card-rating">Рейтинг: 8,5</p>
         </li>
         <li class="hotel-card">
-          <a class="hotel-card-link" href="#">
+          <a class="hotel-card-image-link" href="#">
             <img class="hotel-card-image" src="./image/catalog/hotel-2.jpg" width="180" height="120" alt="desert">
-            <h3 class="hotel-card-title">Desert Quail Inn</h3>
-            <p class="hotel-card-desc">Мотель</p>
           </a>
-          <b class="hotel-card-desc">от 3000 ₽ </b>
-          <a href="#" class="button button-secondary">Подробнее</a>
-          <a href="#" class="button button-blue">В избранное</a>
+          <a class="hotel-card-title-link" href="#">
+            <h3 class="hotel-card-title">Desert Quail Inn</h3>
+          </a>
+          <p class="hotel-card-description">
+            <span>Мотель</span>
+            от 3000 ₽
+          </p>
+          <div class="hotel-card-buttons">
+            <a href="#" class="button button-secondary">Подробнее</a>
+            <a href="#" class="button button-blue">В избранное</a>
+          </div>
           <p class="stars stars-3">
             <span class="visually-hidden">3 звезды</span>
           </p>
           <p class="hotel-card-rating">Рейтинг: 8,9</p>
         </li>
         <li class="hotel-card">
-          <a class="hotel-card-link" href="#">
+          <a class="hotel-card-image-link" href="#">
             <img class="hotel-card-image" src="./image/catalog/hotel-3.jpg" width="180" height="120" alt="villas">
-            <h3 class="hotel-card-title">Villas at Poco Diablo</h3>
-            <p class="hotel-card-desc">Апартаменты</p>
           </a>
-          <b class="hotel-card-desc">от 2000 ₽ </b>
-          <a href="#" class="button button-secondary">Подробнее</a>
-          <a href="#" class="button button-success">В избранном</a>
+          <a class="hotel-card-title-link" href="#">
+            <h3 class="hotel-card-title">Villas at Poco Diablo</h3>
+          </a>
+          <p class="hotel-card-description">
+            <span>Апартаменты</span>
+            от 2000 ₽
+          </p>
+          <div class="hotel-card-buttons">
+            <a href="#" class="button button-secondary">Подробнее</a>
+            <a href="#" class="button button-success">В избранном</a>
+          </div>
           <p class="stars stars-2">
             <span class="visually-hidden">2 звезды</span>
           </p>
           <p class="hotel-card-rating">Рейтинг: 9,2</p>
         </li>
         <li class="hotel-card">
-          <a class="hotel-card-link" href="#">
+          <a class="hotel-card-image-link" href="#">
             <img class="hotel-card-image" src="./image/catalog/hotel-4.jpg" width="180" height="120" alt="greentree">
-            <h3 class="hotel-card-title">GreenTree Inn</h3>
-            <p class="hotel-card-desc">Гостиница</p>
           </a>
-          <b class="hotel-card-desc">от 3000 ₽</b>
-          <a href="#" class="button button-secondary">Подробнее</a>
-          <a href="#" class="button button-blue">В избранное</a>
+          <a class="hotel-card-title-link" href="#">
+            <h3 class="hotel-card-title">GreenTree Inn</h3>
+          </a>
+          <p class="hotel-card-description">
+            <span>Гостиница</span>
+            от 3000 ₽
+          </p>
+          <div class="hotel-card-buttons">
+            <a href="#" class="button button-secondary">Подробнее</a>
+            <a href="#" class="button button-blue">В избранное</a>
+          </div>
           <p class="stars stars-2">
             <span class="visually-hidden">2 звезды</span>
           </p>
           <p class="hotel-card-rating">Рейтинг: 9,2</p>
         </li>
       </ul>
-      <button class="button button-large" type="button">Загрузить ещё</button>
+      <div class="button-loading">
+        <button class="button button-large" type="button">Загрузить ещё</button>
+      </div>
       <div class="pagination-container">
         <ul class="pagination">
           <li class="pagination-item">
@@ -256,7 +276,7 @@
         </ul>
         <form class="page-type">
           <label class="page-type-type" for="page-type">Гостиниц на странице:</label>
-          <select class="select-control" id="page-type" name="page-type">
+          <select class="select-control-type" id="page-type" name="page-type">
             <option value="4">4</option>
             <option value="16">16</option>
             <option value="32">32</option>
