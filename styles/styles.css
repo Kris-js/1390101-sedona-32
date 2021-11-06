@@ -63,7 +63,7 @@ html {
   flex-grow: 1;
   width: 350px;
   margin: 0;
-  padding: 0;
+  padding-left: 56px;
   list-style-type: none;
   flex-wrap: wrap;
 }
@@ -83,11 +83,13 @@ html {
   display: flex;
   justify-content: flex-end;
   flex-grow: 1;
+  align-items: center;
   width: 350px;
   margin: 0;
-  padding: 0;
+  padding-right: 72px;
   list-style-type: none;
   flex-wrap: wrap;
+
 }
 
 .main-container {
@@ -247,32 +249,35 @@ html {
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
-  color: #ffffff;
 }
 
 .mailing-text {
   margin-bottom: 26px;
   font-size: 22px;
   line-height: 26px;
-  color: #ffffff;
 }
 
 .page-footer {
-  display: flex;
+  display: grid;
+  grid-template-rows: min-content;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding-top: 40px;
+  padding-bottom: 30px;
+  padding-left: 72px;
+  padding-right: 45px;
 }
 
 .footer-social {
-  display: flex;
-  flex-grow: 1;
-  margin: 0;
-  flex-wrap: wrap;
+  grid-column: 1;
+  grid-row: 1;
 }
 
 .footer-social-list {
-  display: block;
-  margin: 0;
-  padding: 50px 100px 53px 72px;
+  display: flex;
   list-style-type: none;
+  margin: 0;
+  align-items: center;
+  justify-content: start;
 }
 
 .footer-social-item {
@@ -286,18 +291,12 @@ html {
   font-size: 40px;
   line-height: 40px;
   margin: 0;
-  padding-top: 40px;
-  padding-bottom: 30px;
 }
 
 .page-footer-developer {
-  display: flex;
-  flex-grow: 1;
-  justify-content: flex-end;
-  width: 150px;
-  margin: 0;
-  padding-top: 42px;
-  padding-bottom: 45px;
+  align-self: center;
+  justify-self: right;
+
 }
 
 /* button */
@@ -341,6 +340,7 @@ html {
   background-repeat: no-repeat;
   color: #ffffff;
   background-size: cover;
+  padding: 34px 72px 83px 72px;
 }
 
 .page-main {
@@ -383,7 +383,6 @@ html {
 
 .catalog-filter-group {
   width: 150px;
-  margin-left: 71px;
 }
 
 .catalog-filter-price {
@@ -413,16 +412,22 @@ html {
 
 .hotels-sorting {
   display: flex;
-  margin: 0;
+  padding: 50px 72px 42px 71px;
 }
 
 .hotels-sorting-title {
+  display: flex;
+  align-items: center;
   font-size: 30px;
   line-height: 39px;
   font-weight: bold;
-  margin-top: 50px;
-  margin-bottom: 45px;
-  margin-right: 192px;
+  margin: 0;
+}
+
+.sorting-type {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 .select-control {
@@ -430,54 +435,100 @@ html {
   line-height: 23px;
   border: 2px solid #e6e6e6;
   border-radius: 4px;
-  margin-top: 44px;
-  margin-bottom: 42px;
-  margin-right: 81px;
 }
 
 .button-sorting {
   display: flex;
-  margin-right: auto;
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-right: 8px;
   width: 48px;
   height: 48px;
 }
 
 .button-sorting-active {
   display: flex;
-  margin-right: auto;
+  justify-content: flex-end;
+  align-self: center;
   width: 48px;
   height: 48px;
 }
 
+.hotel-card-section {
+  padding-left: 72px;
+  padding-right: 72px;
+}
+
 .hotel-list {
+  display: grid;
   list-style-type: none;
   margin: 0;
   padding: 0;
+}
+
+.hotel-card {
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  grid-template-columns: 180px 1fr 160px;
+  column-gap: 36px;
+  padding-top: 31px;
+  padding-bottom: 30px;
+}
+
+.hotel-card-title-link {
+  color: #000000;
+  grid-column: 2;
+  grid-row: 1;
 }
 
 .hotel-card-title {
   font-size: 24px;
   line-height: 31px;
   font-weight: bold;
-  color: #000000;
+  margin: 0;
 }
 
-.hotel-card-desc {
+.hotel-card-image-link {
+  grid-row: 1 / 4;
+  grid-column: 1;
+}
+
+.hotel-card-description {
   font-size: 18px;
   line-height: 23px;
   color: #333333;
+  grid-column: 2;
+  grid-row: 2;
+  margin: 0;
+}
+
+.hotel-card-buttons {
+  grid-column: 2;
+  grid-row: 3;
 }
 
 .hotel-card-rating {
   font-size: 16px;
   line-height: 21px;
   color: #333333;
+  grid-column: 3;
+  grid-row: 3;
+  margin: 0;
+}
+
+.stars {
+  grid-column: 3;
+  grid-row: 1;
+}
+
+.button-loading {
+  margin: auto;
 }
 
 .pagination-container {
   display: flex;
-  margin-top: 31px;
-  margin-bottom: 89px;
+  padding-top: 31px;
 }
 
 .pagination {
@@ -485,6 +536,7 @@ html {
   margin: 0;
   padding: 0;
   list-style-type: none;
+  align-items: center;
 }
 
 .pagination-link {
@@ -521,9 +573,21 @@ html {
   line-height: 23px;
   color: #333333;
   margin-left: auto;
+  align-self: center;
 }
 
-.mailing-catalog {
+.select-control-type {
+  font-size: 18px;
+  line-height: 23px;
+  border: 2px solid #e6e6e6;
+  border-radius: 4px;
+  width: 160px;
+  height: 48px;
+  margin-left: 51px;
+}
+
+.mailing-blank {
   background-color: #ffffff;
   color: #000000;
+  background-image: none;
 }
