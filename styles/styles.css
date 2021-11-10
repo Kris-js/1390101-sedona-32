@@ -384,6 +384,34 @@ html {
   font-size: 16px;
   line-height: 21px;
   list-style-type: none;
+  padding: 0;
+}
+
+.breadcrumbs-item {
+  position: relative;
+}
+
+.breadcrumbs-link {
+  padding-left: 26px;
+}
+
+.breadcrumbs .breadcrumbs-link {
+  background-image: url('image/catalog_home_arrow.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  color: #ffffff;
+  /* почему не вставилась фоновая картинка? */
+}
+
+
+.breadcrumbs-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  fill: #ffffff;
 }
 
 .catalog {
@@ -434,7 +462,6 @@ html {
   display: grid;
   padding: 50px 72px 42px 71px;
   grid-template-columns: max-content 1fr 1fr;
-
 }
 
 .hotels-sorting-title {
@@ -460,7 +487,7 @@ html {
 }
 
 .hotels-button-sorting {
-  grid-column: 3;
+  display: flex;
   align-items: center;
   justify-self: right;
 }
@@ -474,6 +501,12 @@ html {
 .button-sorting-active {
   width: 48px;
   height: 48px;
+}
+
+.hotels-button-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .hotel-card-section {
