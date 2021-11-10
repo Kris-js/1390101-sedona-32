@@ -80,13 +80,34 @@ html {
   text-decoration: none;
 }
 
-.navigation-icon {
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  margin: auto;
-  fill: #000000;
+.navigation-link:hover {
+  color: #756257;
+}
+
+.navigation-link:hover.navigation-icon {
+  fill: #756257;
+}
+
+.navigation-link:focus {
+  color: #756257;
+  border: 3px solid #83b3d3;
+  border-radius: 10px;
+}
+
+.navigation-link:focus.navigation-icon {
+  color: #756257;
+  border: 3px solid #83b3d3;
+  border-radius: 10px;
+}
+
+.navigation-link:active {
+  color: #756257;
+  opacity: 0.3;
+}
+
+.navigation-link:active.navigation-icon {
+  color: #756257;
+  opacity: 0.3;
 }
 
 .navigation-list-user {
@@ -294,7 +315,7 @@ html {
   position: relative;
 }
 
-.fotter-sotial-image {
+.footer-sotial-image {
   position: absolute;
   top: 0;
   right: 0;
@@ -304,6 +325,20 @@ html {
   fill: #83b3d3;
 }
 
+.footer-social-link:hover {
+  background-color: #68a2ca;
+}
+
+.footer-social-link:focus {
+  background-color: #68a2ca;
+  border: 3px solid #83b3d3;
+  border-radius: 10px;
+}
+
+.footer-social-link:active {
+  background-color: #68a2ca;
+  opacity: 0.3;
+}
 .page-footer-contacts {
   font-size: 40px;
   line-height: 40px;
@@ -312,11 +347,39 @@ html {
   color: #000000;
 }
 
+.page-footer-contacts:hover {
+color: #756257;
+}
+
+.page-footer-developer:hover {
+  color: #756257;
+}
+
+.page-footer-contacts:focus {
+  color: #756257;
+  border: 3px solid #83b3d3;
+  border-radius: 10px;
+}
+
+.page-footer-developer:focus {
+  color: #756257;
+  border: 3px solid #83b3d3;
+  border-radius: 10px;
+}
+
+.page-footer-contacts:active {
+  color: #756257;
+  opacity: 0.3;
+}
+
+.page-footer-developer:active {
+  color: #756257;
+  opacity: 0.3;
+}
+
 .page-footer-developer {
   align-self: center;
   justify-self: right;
-  background-image: url("image/logo_htmlacademy.svg")
-/* хотя мы должны вставлять ее svg прямо в разметку, так как у нее есть разные состояния? Но картинка очень большая получается */
 }
 
 /* button */
@@ -333,6 +396,27 @@ html {
 
 .button-secondary {
   background-color: #756257;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.button.button-secondary:hover {
+  background-color: #615048;
+  border-radius: 4px;
+}
+
+.button-secondary.button:focus {
+  background-color: #615048;
+  border: 3px solid #83b3d3;
+  border-radius: 4px;
+}
+
+.button-secondary.button:active {
+  color: #ffffff;
+  opacity: 0.3;
+  background-color: #615048;
+  border: 3px solid #83b3d3;
+  border-radius: 4px;
 }
 
 .button-success {
@@ -345,6 +429,31 @@ html {
 
 .button-large {
   font-size: 20px;
+}
+
+.button.button-large:hover {
+  background-color: #68a2ca;
+}
+
+.button.button-large:focus {
+  background-color: #68a2ca;
+  border: 3px solid #756257;
+}
+
+.button.button-large:active {
+  color: #ffffff;
+  opacity: 0.3;
+  background-color: #68a2ca;
+}
+
+.button.button-secondary.button-large:hover {
+  background-color: #615048;
+}
+
+.button.button-secondary.button-large:hover {
+  background-color: #615048;
+  border: 3px solid #83b3d3;
+  border-radius: 10px;
 }
 
 .button-reset {
@@ -493,19 +602,27 @@ html {
 }
 
 .button-sorting {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-right: 8px;
   width: 48px;
   height: 48px;
 }
 
-.button-sorting-active {
-  width: 48px;
-  height: 48px;
+
+.button-sorting svg {
+  fill: #000000;
+}
+
+.button-sorting-current {
+  border: 2px solid #000000;
+  border-radius: 4px;
 }
 
 .hotels-button-icon {
   display: flex;
-  align-items: center;
+  align-self: center;
   justify-content: center;
 }
 
@@ -562,6 +679,13 @@ html {
   grid-row: 3;
 }
 
+.stars-icon {
+  grid-column: 3;
+  grid-row: 1;
+  padding-right: 7px;
+  margin: 0 auto;
+}
+
 .hotel-card-rating {
   font-size: 16px;
   line-height: 21px;
@@ -574,6 +698,7 @@ html {
 .stars {
   grid-column: 3;
   grid-row: 1;
+  margin: 0;
 }
 
 .button-loading {
@@ -599,6 +724,7 @@ html {
   width: 55px;
   height: 55px;
   text-align: center;
+  align-items: center; /*почему не выходит выровнять?*/
   font-size: 20px;
   line-height: 26px;
   font-weight: bold;
