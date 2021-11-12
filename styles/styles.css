@@ -287,6 +287,17 @@ html {
   line-height: 26px;
 }
 
+.field {
+  width: 600px;
+  background-color: #f2f2f2;
+  border-radius: 10px 0 0 10px;
+  font-size: 18px;
+  line-height: 26px;
+  color: #000000;
+  opacity: 0.6;
+}
+/* беда с высотой поля и кнопкой, как ее прилепить к форме?*/
+
 .page-footer {
   display: grid;
   grid-template-columns: 1fr max-content 1fr;
@@ -339,6 +350,7 @@ html {
   background-color: #68a2ca;
   opacity: 0.3;
 }
+
 .page-footer-contacts {
   font-size: 40px;
   line-height: 40px;
@@ -392,6 +404,7 @@ color: #756257;
   font-weight: bold;
   text-transform: uppercase;
   border: none;
+  text-decoration: none;
 }
 
 .button-secondary {
@@ -403,6 +416,20 @@ color: #756257;
 .button.button-secondary:hover {
   background-color: #615048;
   border-radius: 4px;
+}
+
+.button.button-secondary:focus {
+  background-color: #615048;
+  border: 3px solid #83b3d3;
+  border-radius: 4px;
+}
+/* тоже прозрачность на фокусе, определенно что-то идет не так))*/
+
+.button-secondary.button:active {
+  background-color: #615048;
+  border-radius: 4px;
+  color: #ffffff;
+  opacity: 0.3;
 }
 
 .button-secondary.button:focus {
@@ -423,12 +450,29 @@ color: #756257;
   background-color: #7db54f;
 }
 
+.button-success:hover {
+  background-color: #6c9e42;
+  border-radius: 4px;
+}
+
+.button-success:focus {
+  background-color: #6c9e42;
+  border: 3px solid #756257;
+  border-radius: 4px;
+}
+
+.button-success:active {
+  color: #ffffff;
+  opacity: 0.3;
+}
+
 .button-ghost {
   background-color: transparent;
 }
 
 .button-large {
   font-size: 20px;
+
 }
 
 .button.button-large:hover {
@@ -450,10 +494,28 @@ color: #756257;
   background-color: #615048;
 }
 
-.button.button-secondary.button-large:hover {
+.button.button-secondary.button-large:focus {
   background-color: #615048;
   border: 3px solid #83b3d3;
   border-radius: 10px;
+}
+
+.button-blue:hover {
+  background-color: #68a2ca;
+  border: 1px solid #756257;
+  border-radius: 4px;
+}
+
+.button-blue:focus {
+  background-color: #68a2ca;
+  border: 3px solid #756257;
+  border-radius: 4px;
+}
+
+.button-blue:active {
+  background-color: #68a2ca;
+  color: #ffffff;
+  opacity: 0.3;
 }
 
 .button-reset {
@@ -494,6 +556,7 @@ color: #756257;
   line-height: 21px;
   list-style-type: none;
   padding: 0;
+  padding-bottom: 45px;
 }
 
 .breadcrumbs-item {
@@ -511,7 +574,6 @@ color: #756257;
   color: #ffffff;
   /* почему не вставилась фоновая картинка? */
 }
-
 
 .breadcrumbs-icon {
   position: absolute;
@@ -532,24 +594,149 @@ color: #756257;
   display: flex;
 }
 
+.catalog-filter-group {
+  width: 150px;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
 .catalog-filter-title {
   font-size: 20px;
   font-weight: bold;
   line-height: 26px;
 }
 
-.catalog-filter-group {
-  width: 150px;
+.control {
+  position: relative;
+  display: block;
+  padding-left: 39px;
 }
+
+.control-mark {
+  position: absolute;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  background-color: #ffffff;
+}
+
+.control:hover .control-mark {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+}
+
+.control-input[type="checkbox"]:checked + .control-mark::before,
+.control-input[type="checkbox"]:checked + .control-mark::after {
+  position: absolute;
+  top: 7px;
+  left: 2px;
+  width: 12px;
+  height: 2px;
+  background-color: #3f5e72;
+  content: "";
+}
+/*сделать галочку не успела*/
 
 .catalog-filter-price {
   width: 290px;
-  margin-left: 216px;
+  margin-left: 167px;
+}
+
+.range-scale {
+  position: relative;
+  height: 4px;
+  margin-bottom: 30px;
+  background-color: #ffffff;
+  color: rgba(0.5);
+  opacity: 0.3;
+}
+/* размеры взяла из головы и положение тоже, не совсем понимаю как его расположить правильно*/
+
+.range-bar {
+  position: absolute;
+  height: 4px;
+  background-color: #ffffff;
+}
+/* свойство опасити наследуется на все дочерние элементы, как его убрать? */
+
+.range-toggle {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: #FFFFFF;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.range-toggle:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.range-toggle:focus {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  border: 3px solid #83b3d3;
+}
+
+.range-toggle:active {
+  box-shadow: 0 7px 15px rgba(0, 0, 0, 0.4);
+  border: 2px solid #83b3d3;
 }
 
 .catalog-search-container {
   width: 160px;
   margin-right: 72px;
+}
+
+.toggle-min {
+  top: -8px;
+}
+
+.toggle-max {
+  top: -8px;
+  right: -51px;
+}
+
+.range-wrapper-inputs {
+  display: flex;
+  justify-content: center;
+}
+
+.catalog-filter-label {
+  display: flex;
+  margin-right: 5px;
+}
+
+.catalog-filter-input {
+  width: 143px;
+  height: 48px;
+  padding-left: 19px;
+  text-align: start;
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 4px;
+  appearance: textfield;
+  color: #ffffff;
+  font-size: 18px;
+  line-height: 23px;
+}
+
+.catalog-filter-input:hover {
+  border: 2px solid #ffffff;
+  border-radius: 4px 0 0 4px;
+  opacity: 0.6;
+}
+
+.catalog-filter-input:focus {
+  border: 2px solid #ffffff;
+  box-shadow: 0 0 0 3px #81b3d2;
+}
+
+.catalog-filter-input:active {
+  background-color: #756257;
+  border: 2px solid #ffffff;
+  border-radius: 4px 0 0 4px;
 }
 
 .control-label {
@@ -593,6 +780,25 @@ color: #756257;
   line-height: 23px;
   border: 2px solid #e6e6e6;
   border-radius: 4px;
+  padding: 12px 127px 13px 19px;
+  background-color: #ffffff;
+}
+
+.select-control:hover {
+  border: 2px solid #83b3d3;
+  border-radius: 4px;
+}
+
+.select-control:focus {
+  border: 2px solid #83b3d3;
+  border-radius: 4px;
+}
+
+.select-control:active {
+  color: #333333;
+  opacity: 0.3;
+  border: 2px solid #e6e6e6;
+  border-radius: 4px;
 }
 
 .hotels-button-sorting {
@@ -608,11 +814,27 @@ color: #756257;
   margin-right: 8px;
   width: 48px;
   height: 48px;
+  border: 2px solid #e6e6e6;
+  border-radius: 4px;
 }
-
 
 .button-sorting svg {
   fill: #000000;
+}
+
+.button-sorting:hover {
+  border: 2px solid #83b3d3;
+  border-radius: 4px;
+}
+
+.button-sorting:focus {
+  border: 2px solid #83b3d3;
+  border-radius: 4px;
+}
+
+.button-sorting:active {
+  border: 2px solid #000000;
+  border-radius: 4px;
 }
 
 .button-sorting-current {
@@ -651,6 +873,15 @@ color: #756257;
   color: #000000;
   grid-column: 2;
   grid-row: 1;
+  text-decoration: none;
+}
+
+.hotel-card-title-link:hover {
+  color: #756257;
+}
+
+.hotel-card-title-link:focus {
+  border: 3px solid #83b3d3;
 }
 
 .hotel-card-title {
@@ -663,6 +894,19 @@ color: #756257;
 .hotel-card-image-link {
   grid-row: 1 / 4;
   grid-column: 1;
+}
+
+.hotel-card-image-link:hover {
+  opacity: 0.6;
+}
+
+.hotel-card-image-link:focus {
+  border: 3px solid #83b3d3;
+}
+/* смещается бордер и сохраняется прозрачность почему? */
+
+.hotel-card-image-link:active {
+  opacity: 0.3;
 }
 
 .hotel-card-description {
@@ -702,8 +946,10 @@ color: #756257;
 }
 
 .button-loading {
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
+/* почему нe отцентровался?*/
 
 .pagination-container {
   display: flex;
@@ -736,6 +982,23 @@ color: #756257;
 
 .pagination-item:not(:last-child) {
   margin-right: 7px;
+}
+
+.pagination-link:hover {
+  background-color: #68a2ca;
+  border-radius: 4px;
+}
+
+.pagination-link:focus {
+  background-color: #68a2ca;
+  border: 3px solid #756257;
+  border-radius: 4px;
+}
+
+.pagination-link:active {
+  background-color: #68a2ca;
+  color: #ffffff;
+  opacity: 0.3;
 }
 
 .pagination-current {
