@@ -65,6 +65,7 @@ html {
 
 .navigation-button {
   min-width: 160px;
+  margin-left: 20px;
 }
 
 .navigation-list {
@@ -140,6 +141,11 @@ html {
   right: -3px;
 }
 
+.navigation-link-icon:hover.navigation-icon {
+  color: #756257;
+}
+/* не работает наведение*/
+
 .navigation-link-icon:focus {
 color: #756257;
 outline: 3px solid #83b3d3;
@@ -154,6 +160,7 @@ outline-offset: -3px;
 }
 
 .welcome {
+  position: relative;
   background-image: url("../image/background/sedona.jpg");
   background-color: #83b3d3;
   color: #ffffff;
@@ -161,6 +168,12 @@ outline-offset: -3px;
   background-repeat: no-repeat;
   padding-top: 46px;
   padding-bottom: 83px;
+}
+
+/* вторая картинка не отображается */
+
+.welcome-picture-part {
+  position: absolute;
 }
 
 .welcome-picture {
@@ -287,6 +300,16 @@ outline-offset: -3px;
   margin-bottom: 73px;
 }
 
+.button-search {
+  display: inline-block;
+  padding-top: 13px;
+  padding-bottom: 17px;
+  width: 575px;
+  text-align: center;
+}
+
+/* выровнила текст по центру, но не получилось задать ширину */
+
 .mailing {
   margin: 0;
   padding: 94px 200px 94px;
@@ -316,6 +339,7 @@ outline-offset: -3px;
   display: grid;
   grid-template-columns: 600px 200px;
   grid-template-rows: 60px;
+  padding-top: 26px;
 }
 
 .field {
@@ -333,6 +357,12 @@ outline-offset: -3px;
   opacity: 0.6;
 }
 
+.button-mailing {
+  border-radius: 0 10px 10px 0;
+}
+
+/* бордер радиус не срабатывает*/
+
 .page-footer {
   display: grid;
   grid-template-columns: 1fr max-content 1fr;
@@ -345,19 +375,21 @@ outline-offset: -3px;
 .footer-social {
   grid-column: 1;
   grid-row: 1;
+
 }
 
 .footer-social-list {
   display: flex;
   list-style-type: none;
   margin: 0;
+  justify-content: flex-start;
   align-items: center;
 }
 
 .footer-social-item {
   width: 25px;
   height: 25px;
-  margin-right: 10px;
+  margin-right: 20px;
   position: relative;
 }
 
@@ -475,7 +507,7 @@ color: #756257;
 
 .button-secondary.button:focus {
   background-color: #615048;
-  border: 3px solid #83b3d3;
+  outline: 3px solid #83b3d3;
 
 }
 
@@ -1063,7 +1095,14 @@ color: #756257;
   color: #333333;
   margin-left: auto;
   align-self: center;
+
 }
+
+.page-type-type {
+  text-align: center;
+}
+
+/* текст не выравнивается */
 
 .select-control-type {
   font-size: 18px;
