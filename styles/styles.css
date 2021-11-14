@@ -107,6 +107,13 @@ html {
   opacity: 0.3;
 }
 
+.navigation-home {
+  margin: 0 auto;
+  width: 70px;
+  margin-top: 15px;
+}
+/* не получается прибить к низу и отключить навигацию*/
+
 .navigation-list-user {
   display: flex;
   justify-content: flex-end;
@@ -141,16 +148,19 @@ html {
   right: -3px;
 }
 
-.navigation-link-icon:hover.navigation-icon {
+.navigation-link-icon:hover {
   color: #756257;
 }
-/* не работает наведение*/
 
 .navigation-link-icon:focus {
-color: #756257;
-outline: 3px solid #83b3d3;
-border-radius: 10px;
-outline-offset: -3px;
+  outline: 3px solid #83b3d3;
+  border-radius: 10px;
+  outline-offset: -3px;
+}
+
+.navigation-link-icon:active {
+  color: rgba(117, 98, 87, 0.3);
+  outline: none;
 }
 
 .main-container {
@@ -301,14 +311,12 @@ outline-offset: -3px;
 }
 
 .button-search {
-  display: inline-block;
   padding-top: 13px;
   padding-bottom: 17px;
   width: 575px;
   text-align: center;
 }
-
-/* выровнила текст по центру, но не получилось задать ширину */
+/* падинги не применяются */
 
 .mailing {
   margin: 0;
@@ -353,15 +361,37 @@ outline-offset: -3px;
 }
 
 .field::placeholder {
-  color: #000000;
-  opacity: 0.6;
+  color: rgba(0, 0, 0, 0.6);
 }
+
+.field:hover {
+  background-color: #e6e6e6;
+}
+
+.field:focus {
+  background-color: #ffffff;
+  outline: 3px solid #83b3d3;
+}
+
+.field:active {
+  background-color: #ffffff;
+  outline: 2px solid #000000;
+  color: #000000;
+}
+
+.field:active {
+  background-color: #ffffff;
+  outline: 2px solid #ff57ff;
+  color:rgba(0, 0, 0, 0.6);
+}
+/* состояние ошибки, название поменять*/
+
 
 .button-mailing {
   border-radius: 0 10px 10px 0;
 }
 
-/* бордер радиус не срабатывает*/
+/* бордер радиус не срабатывает. Одинаковая проблема как и в Поиске гостиниц */
 
 .page-footer {
   display: grid;
@@ -375,7 +405,6 @@ outline-offset: -3px;
 .footer-social {
   grid-column: 1;
   grid-row: 1;
-
 }
 
 .footer-social-list {
@@ -387,35 +416,40 @@ outline-offset: -3px;
 }
 
 .footer-social-item {
-  width: 25px;
-  height: 25px;
-  margin-right: 20px;
+  margin-right: 10px;
+}
+
+.footer-social-link {
   position: relative;
+  display: grid;
+  place-content: center;
+  width: 40px;
+  height: 40px;
 }
 
 .footer-sotial-image {
   position: absolute;
   top: 0;
-  right: 0;
-  bottom: 0;
+  right: 10px;
+  bottom: 10px;
   left: 0;
-  margin: auto;
-  fill: #83b3d3;
+  color: #83b3d3;
 }
 
+/* не равняется картинка по центру. Ховер и актив не срабатывает*/
+
 .footer-social-link:hover {
-  background-color: #68a2ca;
+  color: #68a2ca;
 }
 
 .footer-social-link:focus {
-  background-color: #68a2ca;
-  border: 3px solid #83b3d3;
+  outline: 3px solid #83b3d3;
   border-radius: 10px;
+  outline-offset: -3px;
 }
 
 .footer-social-link:active {
-  background-color: #68a2ca;
-  opacity: 0.3;
+  color: rgba(104, 162, 202, 0.6);
 }
 
 .page-footer-contacts {
@@ -430,36 +464,37 @@ outline-offset: -3px;
 color: #756257;
 }
 
-.page-footer-developer:hover {
-  color: #756257;
-}
-
 .page-footer-contacts:focus {
   color: #756257;
-  border: 3px solid #83b3d3;
+  outline: 3px solid #83b3d3;
   border-radius: 10px;
-}
-
-.page-footer-developer:focus {
-  color: #756257;
-  border: 3px solid #83b3d3;
-  border-radius: 10px;
+  outline-offset: -3px;
 }
 
 .page-footer-contacts:active {
-  color: #756257;
-  opacity: 0.3;
-}
-
-.page-footer-developer:active {
-  color: #756257;
-  opacity: 0.3;
+  color: rgba(117, 98, 87, 0.3);
 }
 
 .page-footer-developer {
   align-self: center;
   justify-self: right;
 }
+
+.page-footer-developer:hover {
+  color: #756257;
+}
+
+.page-footer-developer:focus {
+  color: #756257;
+  outline: 3px solid #83b3d3;
+  border-radius: 10px;
+}
+
+.page-footer-developer:active {
+  color: rgba(117, 98, 87, 0.3);
+}
+
+/* применяется фокус, но не ховер и актив (где-то это уже было)))*/
 
 /* button */
 
@@ -488,13 +523,12 @@ color: #756257;
 
 .button.button-secondary:hover {
   background-color: #615048;
-
 }
 
 .button.button-secondary:focus {
   background-color: #615048;
-  border: 3px solid #83b3d3;
-
+  outline: 3px solid #83b3d3;
+  outline-offset: -3px;
 }
 /* тоже прозрачность на фокусе, определенно что-то идет не так))*/
 
@@ -508,15 +542,14 @@ color: #756257;
 .button-secondary.button:focus {
   background-color: #615048;
   outline: 3px solid #83b3d3;
-
 }
 
 .button-secondary.button:active {
   color: #ffffff;
   opacity: 0.3;
   background-color: #615048;
-  border: 3px solid #83b3d3;
-
+  outline: 3px solid #83b3d3;
+  outline-offset: -3px;
 }
 
 .button-success {
@@ -530,8 +563,8 @@ color: #756257;
 
 .button-success:focus {
   background-color: #6c9e42;
-  border: 3px solid #756257;
-
+  outline: 3px solid #756257;
+  outline-offset: -3px;
 }
 
 .button-success:active {
@@ -553,7 +586,8 @@ color: #756257;
 
 .button-large:focus {
   background-color: #68a2ca;
-  border: 3px solid #756257;
+  outline: 3px solid #756257;
+  outline-offset: -3px;
 }
 
 .button-large:active {
@@ -568,20 +602,23 @@ color: #756257;
 
 .button-secondary:focus {
   background-color: #615048;
-  border: 3px solid #83b3d3;
+  outline: 3px solid #83b3d3;
   border-radius: 10px;
+  outline-offset: -3px;
 }
 
 .button-blue:hover {
   background-color: #68a2ca;
-  border: 1px solid #756257;
+  outline: 1px solid #756257;
   border-radius: 4px;
+  outline-offset: -1px;
 }
 
 .button-blue:focus {
   background-color: #68a2ca;
-  border: 3px solid #756257;
+  outline: 3px solid #756257;
   border-radius: 4px;
+  outline-offset: -3px;
 }
 
 .button-blue:active {
@@ -593,6 +630,12 @@ color: #756257;
 .button-reset {
   text-transform: none;
   font-weight: normal;
+  padding-top: 8px;
+  padding-bottom: 9px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 4px;
+  text-align: center;
 }
 
 /* catalog */
@@ -646,8 +689,18 @@ color: #756257;
   padding-left: 26px;
 }
 
-.breadcrumbs .breadcrumbs-link {
+.breadcrumbs-link:hover {
+  color:rgba(255, 255, 255, 0.6);
+}
+
+.breadcrumbs-link:focus {
   color: #ffffff;
+  outline: 3px solid #83b3d3;
+  border-radius: 4px;
+}
+
+.breadcrumbs-link:active {
+  color:rgba(255, 255, 255, 0.3);
 }
 
 .breadcrumbs-icon {
@@ -671,7 +724,7 @@ color: #756257;
 
 .catalog-filter-group {
   width: 150px;
-  margin: 0;
+  margin-right: 67px;
   padding: 0;
   border: none;
 }
@@ -680,6 +733,21 @@ color: #756257;
   font-size: 20px;
   font-weight: bold;
   line-height: 26px;
+  padding-bottom: 30px;
+}
+
+.catalog-filter-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.catalog-filter-item {
+  padding-bottom: 13px;
+}
+
+.catalog-filter-item:last-child {
+  padding-bottom: 0;
 }
 
 .control {
@@ -714,13 +782,23 @@ color: #756257;
 }
 /*сделать галочку не успела*/
 
+.control-input[type="radio"] + .control-mark {
+  border-radius: 50%;
+}
+
 .popover {
   display: none;
 }
 
 .catalog-filter-price {
   width: 290px;
-  margin-left: 167px;
+  margin-left: 100px;
+  margin-right: 81px;
+  border: none;
+}
+
+.range {
+  margin-bottom: 20px;
 }
 
 .range-scale {
@@ -736,7 +814,6 @@ color: #756257;
   height: 4px;
   background-color: #ffffff;
 }
-/* свойство опасити наследуется на все дочерние элементы, как его убрать? */
 
 .range-toggle {
   position: absolute;
@@ -753,17 +830,19 @@ color: #756257;
 
 .range-toggle:focus {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
-  border: 3px solid #83b3d3;
+  outline: 3px solid #83b3d3;
+  outline-offset: -3px;
 }
 
 .range-toggle:active {
   box-shadow: 0 7px 15px rgba(0, 0, 0, 0.4);
-  border: 2px solid #83b3d3;
+  outline: 2px solid #83b3d3;
+  outline-offset: -3px;
 }
 
 .catalog-search-container {
   width: 160px;
-  margin-right: 72px;
+  margin-top: 34px;
 }
 
 .toggle-min {
@@ -800,20 +879,23 @@ color: #756257;
 }
 
 .catalog-filter-input:hover {
-  border: 2px solid #ffffff;
+  outline: 2px solid #ffffff;
   border-radius: 4px 0 0 4px;
   opacity: 0.6;
+  outline-offset: -2px;
 }
 
 .catalog-filter-input:focus {
-  border: 2px solid #ffffff;
+  outline: 2px solid #ffffff;
   box-shadow: 0 0 0 3px #81b3d2;
+  outline-offset: -2px;
 }
 
 .catalog-filter-input:active {
   background-color: #756257;
-  border: 2px solid #ffffff;
+  outline: 2px solid #ffffff;
   border-radius: 4px 0 0 4px;
+  outline-offset: -2px;
 }
 
 .control-label {
@@ -862,20 +944,23 @@ color: #756257;
 }
 
 .select-control:hover {
-  border: 2px solid #83b3d3;
+  outline: 2px solid #83b3d3;
   border-radius: 4px;
+  outline-offset: -2px;
 }
 
 .select-control:focus {
-  border: 2px solid #83b3d3;
+  outline: 2px solid #83b3d3;
   border-radius: 4px;
+  outline-offset: -2px;
 }
 
 .select-control:active {
   color: #333333;
   opacity: 0.3;
-  border: 2px solid #e6e6e6;
+  outline: 2px solid #e6e6e6;
   border-radius: 4px;
+  outline-offset: -2px;
 }
 
 .hotels-button-sorting {
@@ -900,23 +985,33 @@ color: #756257;
 }
 
 .button-sorting:hover {
-  border: 2px solid #83b3d3;
+  outline: 2px solid #83b3d3;
   border-radius: 4px;
+  outline-offset: -2px;
 }
 
 .button-sorting:focus {
-  border: 2px solid #83b3d3;
+  outline: 2px solid #83b3d3;
   border-radius: 4px;
+  outline-offset: -2px;
 }
 
 .button-sorting:active {
-  border: 2px solid #000000;
+  outline: 2px solid #000000;
   border-radius: 4px;
+  outline-offset: -2px;
 }
 
 .button-sorting-current {
-  border: 2px solid #000000;
+  outline: 2px solid #000000;
   border-radius: 4px;
+  outline-offset: -2px;
+}
+
+.delimiter {
+  margin: 0 auto;
+  width: 1056px;
+  border: 1px solid #e6e6e6;
 }
 
 .hotels-button-icon {
@@ -958,7 +1053,8 @@ color: #756257;
 }
 
 .hotel-card-title-link:focus {
-  border: 3px solid #83b3d3;
+  outline: 3px solid #83b3d3;
+  outline-offset: -3px;
 }
 
 .hotel-card-title {
@@ -978,9 +1074,9 @@ color: #756257;
 }
 
 .hotel-card-image-link:focus {
-  border: 3px solid #83b3d3;
+  outline: 3px solid #83b3d3;
+  outline-offset: -3px;
 }
-/* смещается бордер и сохраняется прозрачность почему? */
 
 .hotel-card-image-link:active {
   opacity: 0.3;
@@ -1023,8 +1119,9 @@ color: #756257;
 }
 
 .button-loading {
-  margin-left: auto;
-  margin-right: auto;
+  width: 625px;
+  height: 55px;
+  margin: 31px 287px 30px 250px;
 }
 /* почему нe отцентровался?*/
 
@@ -1069,8 +1166,9 @@ color: #756257;
 
 .pagination-link:focus {
   background-color: #68a2ca;
-  border: 3px solid #756257;
+  outline: 3px solid #756257;
   border-radius: 4px;
+  outline-offset: -3px;
 }
 
 .pagination-link:active {
@@ -1095,14 +1193,13 @@ color: #756257;
   color: #333333;
   margin-left: auto;
   align-self: center;
-
 }
 
 .page-type-type {
   text-align: center;
 }
 
-/* текст не выравнивается */
+/* текст снова не выравнивается(*/
 
 .select-control-type {
   font-size: 18px;
@@ -1112,6 +1209,23 @@ color: #756257;
   width: 160px;
   height: 48px;
   margin-left: 51px;
+  padding-left: 17px;
+}
+
+.select-control-type:hover {
+  outline: 2px solid #83b3d3;
+  border-radius: 4px;
+  outline-offset: -2px;
+}
+
+.select-control-type:focus {
+  outline: 2px solid #83b3d3;
+  border-radius: 4px;
+  outline-offset: -2px;
+}
+
+.select-control-type:active {
+  opacity: 0.3;
 }
 
 .mailing-blank {
