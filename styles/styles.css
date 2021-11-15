@@ -126,6 +126,10 @@ html {
   flex-wrap: wrap;
 }
 
+.navigation-item {
+  position: relative;
+}
+
 .navigation-link-icon {
   position: relative;
   width: 38px;
@@ -161,6 +165,39 @@ html {
 .navigation-link-icon:active {
   color: rgba(117, 98, 87, 0.3);
   outline: none;
+}
+
+.popover {
+  position: absolute;
+  top: 51px;
+  right: -120px;
+  z-index: 1;
+  box-sizing: border-box;
+  width: 326px;
+  padding: 25px;
+  color: #000000;
+  background-color: #FFFFFF;
+  min-height: 186px;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+}
+
+.popover-cart {
+  width: 420px;
+}
+
+.popover-content {
+  height: 100%;
+}
+
+.cart-item {
+  display: grid;
+  grid-template-columns: 48px 244px 16px;
+  grid-template-rows: 48px;
+}
+
+.cart-item .button {
+  grid-row: 2;
+  grid-column: 3;
 }
 
 .main-container {
@@ -379,13 +416,11 @@ html {
   color: #000000;
 }
 
-.field:active {
+.field:not(:placeholder-shown):invalid {
   background-color: #ffffff;
   outline: 2px solid #ff57ff;
   color:rgba(0, 0, 0, 0.6);
 }
-/* состояние ошибки, название поменять*/
-
 
 .button-mailing {
   border-radius: 0 10px 10px 0;
@@ -405,38 +440,25 @@ html {
 .footer-social {
   grid-column: 1;
   grid-row: 1;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .footer-social-list {
   display: flex;
   list-style-type: none;
   margin: 0;
-  justify-content: flex-start;
-  align-items: center;
-}
-
-.footer-social-item {
-  margin-right: 10px;
+  padding: 0;
 }
 
 .footer-social-link {
-  position: relative;
   display: grid;
   place-content: center;
   width: 40px;
   height: 40px;
-}
-
-.footer-sotial-image {
-  position: absolute;
-  top: 0;
-  right: 10px;
-  bottom: 10px;
-  left: 0;
+  margin-right: 10px;
   color: #83b3d3;
 }
-
-/* не равняется картинка по центру. Ховер и актив не срабатывает*/
 
 .footer-social-link:hover {
   color: #68a2ca;
@@ -450,6 +472,7 @@ html {
 
 .footer-social-link:active {
   color: rgba(104, 162, 202, 0.6);
+  outline: none;
 }
 
 .page-footer-contacts {
@@ -477,7 +500,7 @@ color: #756257;
 
 .page-footer-developer {
   align-self: center;
-  justify-self: right;
+  justify-self: end;
 }
 
 .page-footer-developer:hover {
@@ -558,7 +581,6 @@ color: #756257;
 
 .button-success:hover {
   background-color: #6c9e42;
-
 }
 
 .button-success:focus {
@@ -635,7 +657,22 @@ color: #756257;
   padding-left: 10px;
   padding-right: 10px;
   border-radius: 4px;
-  text-align: center;
+}
+
+.button-reset:hover {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.button-reset:focus {
+  color: #ffffff;
+  outline: 3px solid #83b3d3;
+  border-radius: 4px;
+  outline-offset: -3px;
+}
+
+.button-reset:active {
+  color: rgba(255, 255, 255, 0.3);
+  outline: none;
 }
 
 /* catalog */
@@ -729,6 +766,7 @@ color: #756257;
   border: none;
 }
 
+
 .catalog-filter-title {
   font-size: 20px;
   font-weight: bold;
@@ -778,6 +816,7 @@ color: #756257;
   width: 12px;
   height: 2px;
   background-color: #3f5e72;
+  background-image: url(../image/check_mark.svg);
   content: "";
 }
 /*сделать галочку не успела*/
@@ -786,8 +825,8 @@ color: #756257;
   border-radius: 50%;
 }
 
-.popover {
-  display: none;
+.control-input[type="radio"] + .control-mark {
+  border-radius: 50%;
 }
 
 .catalog-filter-price {
@@ -795,6 +834,13 @@ color: #756257;
   margin-left: 100px;
   margin-right: 81px;
   border: none;
+}
+
+.control-label {
+  font-size: 18px;
+  line-height: 23px;
+  text-decoration: none;
+  color: #ffffff;
 }
 
 .range {
@@ -807,7 +853,6 @@ color: #756257;
   margin-bottom: 30px;
   background-color: rgba(255, 255, 255, 0.3);
 }
-/* размеры взяла из головы и положение тоже, не совсем понимаю как его расположить правильно*/
 
 .range-bar {
   position: absolute;
@@ -840,18 +885,13 @@ color: #756257;
   outline-offset: -3px;
 }
 
-.catalog-search-container {
-  width: 160px;
-  margin-top: 34px;
-}
-
 .toggle-min {
   top: -8px;
 }
 
 .toggle-max {
   top: -8px;
-  right: -51px;
+  right: -21px;
 }
 
 .range-wrapper-inputs {
@@ -898,11 +938,24 @@ color: #756257;
   outline-offset: -2px;
 }
 
-.control-label {
-  font-size: 18px;
-  line-height: 23px;
-  text-decoration: none;
-  color: #ffffff;
+.catalog-search-container {
+  width: 160px;
+  margin-top: 34px;
+}
+
+.button-catalog-search:hover {
+  background-color: #68a2ca;
+  border-radius: 4px;
+}
+
+.button-catalog-search:focus {
+  outline: 3px solid #ffffff;
+  outline-offset: -3px;
+}
+
+.button-catalog-search:active {
+  outline: none;
+  color: rgba(255, 255, 255, 0.3);;
 }
 
 .list-of-hotels-title {
