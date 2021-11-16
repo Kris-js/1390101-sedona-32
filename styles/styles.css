@@ -638,6 +638,10 @@ color: #756257;
   cursor: pointer;
 }
 
+.field-group {
+  margin: 0;
+}
+
 .modal-title {
   margin: 0;
   margin-bottom: 32px;
@@ -652,10 +656,22 @@ color: #756257;
   grid-template-rows: min-content min-content 1fr;
 }
 
-.field-group {
-
+.arrival-form-children {
+  position: relative;
 }
 
+.info {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    padding: 0;
+    margin-right: 18px;
+    background-color: transparent;
+    border: none;
+    background-image: url("../image/");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
 
 .field-modal {
   background-color: #f2f2f2;
