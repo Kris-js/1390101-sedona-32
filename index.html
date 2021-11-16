@@ -52,7 +52,7 @@
             <span class="navigation-icon-amount">12</span>
           </a>
 
-          <section class="popover popover-cart popover-open">
+          <section class="popover popover-cart">
             <div class="popover-content">
               <h2 class="visually-hidden">Избранные отели</h2>
               <ul class="cart-items-list">
@@ -288,54 +288,68 @@
 
       <section class="modal-content">
         <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
-        <form class="arrival-form" action="" method="post">
-          <p class="field-group arrival-form-date">
-            <label for="arrival-date">
+        <form class="arrival-form" action="https://echo.htmlacademy.ru/" method="post">
+          <p class="field-group field-group-date">
+            <label class="field-label" for="appointment-date-arrival">
               Дата заезда:</label>
-            <input class="field-modal" type="text" id="appointment-date" name="appointment-date" placeholder="27 апреля 2020">
-            <button class="calendar" type="button">
-              <span class="visually-hidden">Выбрать дату поездки по календарю</span>
-            </button>
+            <input class="field-modal calendar" type="text" id="appointment-date-arrival"
+              name="appointment-date-arrival" placeholder="Укажите дату" value="27 апреля 2020">
+            <span class="field-text field-text-error">
+              Мы не можем отправить вас в прошлое.
+            </span>
           </p>
-          <p class="field-group departure-form-date">
-            <label for="arrival-date">
+          <p class="field-group field-group-date">
+            <label class="field-label" for="appointment-date-departure">
               Дата выезда:
             </label>
-            <input class="field-modal" type="text" id="appointment-date" name="appointment-date"
-              placeholder="1 сентября 2021">
-            <button class="calendar" type="button">
-              <span class="visually-hidden">Выбрать дату поездки по календарю</span>
-            </button>
+            <input class="field-modal calendar" type="text" id="appointment-date-departure"
+              name="appointment-date-departure" placeholder="Укажите дату" value="1 сентября 2021">
+            <span class="field-text">
+              На эти даты есть свободные номера. Пока есть.
+            </span>
           </p>
           <p class="field-group arrival-form-adults">
-            <label for="arrival-date">
+            <label class="field-label" for="number-adults">
               Взрослые:
             </label>
-            <button class="decrease" type="button">
-              <span class="visually-hidden">Уменьшить количество взрослых</span>
-            </button>
-            <input class="field-modal" type="text" id="number" name="number" placeholder="2">
-            <button class="add" type="button">
-              <span class="visually-hidden">Прибавить количество взрослых</span>
-            </button>
+            <span class="counter">
+              <button class="decrease" type="button">
+                <span class="visually-hidden">Уменьшить количество</span>
+              </button>
+              <input class="field-modal" type="text" id="number-adults" name="number-adults" placeholder="2">
+              <button class="increase" type="button">
+                <span class="visually-hidden">Прибавить количество</span>
+              </button>
+            </span>
           </p>
           <p class="field-group arrival-form-children">
-            <label for="arrival-date">
-              Дети:
-            </label>
-            <button class="info" type="button">
-              <span class="visually-hidden">Посмотреть дополнительную информацию</span>
-            </button>
-            <button class="decrease" type="button">
-              <span class="visually-hidden">Уменьшить количество взрослых</span>
-            </button>
-            <input class="field-modal" type="text" id="number" name="number" placeholder="1">
-            <button class="add" type="button">
-              <span class="visually-hidden">Прибавить количество взрослых</span>
-            </button>
+            <span class="field-label">
+              <label for="number-children">
+                Дети:
+              </label>
+              <span class="info">
+                <button class="info-button" type="button">
+                  <span class="visually-hidden">Посмотреть дополнительную информацию</span>
+                </button>
+                <span class="info-text">
+                  Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет
+                  размещаются бесплатно.
+                </span>
+              </span>
+            </span>
+            <span class="counter">
+              <button class="decrease" type="button">
+                <span class="visually-hidden">Уменьшить количество</span>
+              </button>
+              <input class="field-modal" type="text" id="number-children" name="number-children" placeholder="1">
+              <button class="increase" type="button">
+                <span class="visually-hidden">Прибавить количество</span>
+              </button>
+            </span>
           </p>
+          <button class="button button-modal" type="submit">Найти</button>
+        </form>
       </section>
-      <button class="button button-modal" type="submit">Найти</button>
     </div>
   </div>
 </body>
