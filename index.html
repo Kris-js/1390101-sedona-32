@@ -52,19 +52,19 @@
             <span class="navigation-icon-amount">12</span>
           </a>
 
-          <section class="popover popover-cart">
+          <section class="popover popover-cart popover-open">
             <div class="popover-content">
               <h2 class="visually-hidden">Избранные отели</h2>
               <ul class="cart-items-list">
                 <li class="cart-item">
                   <a class="cart-item-link" href="#">
-                    <img class="cart-image" src="./image/cart-hotel-2-small.jpg" width="48" height="48" alt="hotel">
+                    <img class="cart-image" src="./image/hotel-2-small.jpg" width="48" height="48" alt="hotel">
                     <p class="cart-item-title">Desert Quail Inn</p>
                     <p class="cart-item-description">Мотель</p>
                   </a>
                   <button type="button" class="cart-item-button">
-                    <svg width="16" height="16" aria-hidden="true" focusable="false"
-                      viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg width="16" height="16" aria-hidden="true" focusable="false" viewBox="0 0 20 20" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
                       <path
                         d="M17.3 4.3H2.6C2.3 4.3 2 4.5 2 4.8C2 5.1 2.3 5.4 2.6 5.4H4.3V17.4C4.3 17.7 4.6 18 4.9 18H15.1C15.4 18 15.7 17.7 15.7 17.4V5.4H17.4C17.7 5.4 18 5.1 18 4.8C18 4.5 17.6 4.3 17.3 4.3ZM14.5 16.8H5.4V5.4H14.5V16.8Z"
                         fill="black" />
@@ -83,13 +83,13 @@
                 </li>
                 <li class="cart-item">
                   <a class="cart-item-link" href="#">
-                    <img class="cart-image" src="./image/cart-hotel-3-small.jpg" width="48" height="48" alt="hotel">
+                    <img class="cart-image" src="./image/hotel-3-small.jpg" width="48" height="48" alt="hotel">
                     <p class="cart-item-title">Villas at Poco Diablo</p>
                     <p class="cart-item-description">Апартаменты</p>
                   </a>
                   <button type="button" class="cart-item-button">
-                    <svg width="16" height="16" aria-hidden="true" focusable="false"
-                      viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg width="16" height="16" aria-hidden="true" focusable="false" viewBox="0 0 20 20" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
                       <path
                         d="M17.3 4.3H2.6C2.3 4.3 2 4.5 2 4.8C2 5.1 2.3 5.4 2.6 5.4H4.3V17.4C4.3 17.7 4.6 18 4.9 18H15.1C15.4 18 15.7 17.7 15.7 17.4V5.4H17.4C17.7 5.4 18 5.1 18 4.8C18 4.5 17.6 4.3 17.3 4.3ZM14.5 16.8H5.4V5.4H14.5V16.8Z"
                         fill="black" />
@@ -106,12 +106,11 @@
                     <span class="visually-hidden">Удалить из корзины</span>
                   </button>
                 </li>
-                <li class="cart-item">
-                  <a class="button button-popover" href="#">
-                    все избранные
-                  </a>
-                </li>
               </ul>
+              <a class="button button-popover" href="#">
+                все избранные
+              </a>
+
 
             </div>
           </section>
@@ -281,6 +280,64 @@
       </svg>
     </a>
   </footer>
+  <div class="modal-container">
+    <div class="modal modal-search-hotel">
+      <button class="modal-close-button">
+        <span class="visually-hidden">Закрыть</span>
+      </button>
+
+      <section class="modal-content">
+        <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+        <form class="arrival-form" action="" method="post">
+          <p class="field-group arrival-form-date">
+            <label for="arrival-date">
+              Дата заезда:</label>
+            <input class="field-modal" type="text" id="appointment-date" name="appointment-date" placeholder="27 апреля 2020">
+            <button class="calendar" type="button">
+              <span class="visually-hidden">Выбрать дату поездки по календарю</span>
+            </button>
+          </p>
+          <p class="field-group departure-form-date">
+            <label for="arrival-date">
+              Дата выезда:
+            </label>
+            <input class="field-modal" type="text" id="appointment-date" name="appointment-date"
+              placeholder="1 сентября 2021">
+            <button class="calendar" type="button">
+              <span class="visually-hidden">Выбрать дату поездки по календарю</span>
+            </button>
+          </p>
+          <p class="field-group arrival-form-adults">
+            <label for="arrival-date">
+              Взрослые:
+            </label>
+            <button class="decrease" type="button">
+              <span class="visually-hidden">Уменьшить количество взрослых</span>
+            </button>
+            <input class="field-modal" type="text" id="number" name="number" placeholder="2">
+            <button class="add" type="button">
+              <span class="visually-hidden">Прибавить количество взрослых</span>
+            </button>
+          </p>
+          <p class="field-group arrival-form-children">
+            <label for="arrival-date">
+              Дети:
+            </label>
+            <button class="info" type="button">
+              <span class="visually-hidden">Посмотреть дополнительную информацию</span>
+            </button>
+            <button class="decrease" type="button">
+              <span class="visually-hidden">Уменьшить количество взрослых</span>
+            </button>
+            <input class="field-modal" type="text" id="number" name="number" placeholder="2">
+            <button class="add" type="button">
+              <span class="visually-hidden">Прибавить количество взрослых</span>
+            </button>
+          </p>
+      </section>
+      <button class="button button-modal" type="submit">Найти</button>
+    </div>
+  </div>
 </body>
 
 </html>
