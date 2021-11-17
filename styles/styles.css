@@ -606,6 +606,8 @@ color: #756257;
   display: none;
 }
 
+/* почему это не секция, а див? А секция ниже?*/
+
 .modal {
   position: relative;
   margin: auto;
@@ -618,6 +620,8 @@ color: #756257;
   border-radius: 30px;
 }
 
+/* модальное окно прилипо к верхнему краю, это нормально?*/
+
 .modal-search-hotel {
   width: 715px;
 }
@@ -625,8 +629,8 @@ color: #756257;
 .modal-close-button {
   position: absolute;
   padding: 0;
-  top: 0;
-  right: 0;
+  top:54px;
+  right: 70px;
   width: 53px;
   height: 53px;
   background-color: transparent;
@@ -694,6 +698,13 @@ color: #756257;
   top: 40px;
   left: 50%;
   margin-left: -128px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  text-align: left;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  padding: 15px 18px 18px 22px;
 }
 
 .info-text::before {
@@ -703,7 +714,7 @@ color: #756257;
   position: absolute;
   right: 0;
   left: 0;
-  background-image: url(../image/triangle-black.svg);
+  background-image: url("../image/triangle-black.svg");
   margin: 0 auto;
   bottom: 100%;
 }
@@ -728,9 +739,18 @@ color: #756257;
   padding-left: 19px;
 }
 
+/* не применяется цвет к цифре*/
+
 .field-text {
   grid-column: 2 / 3;
   align-self: center;
+  font-size: 16px;
+  line-height: 40px;
+  color: #333333;
+}
+
+.field-text-error {
+  color: #ff5757;
 }
 
 .button-modal {
@@ -757,6 +777,7 @@ color: #756257;
   border: none;
   top: 50%;
   margin-top: -12px;
+  opacity: 0.3;
 }
 
 .decrease {
@@ -773,12 +794,16 @@ color: #756257;
   padding-left: 45px;
   padding-right: 45px;
   text-align: center;
+  color: #000000;
 }
 
 .field-label {
   display: flex;
   align-items: center;
   align-self: center;
+  font-size: 18px;
+  line-height: 40px;
+  font-weight: 700;
 }
 
 .arrival-form-children .field-label {
@@ -886,6 +911,7 @@ color: #756257;
   padding-left: 10px;
   padding-right: 10px;
   border-radius: 4px;
+  width: 160px;
 }
 
 .button-reset:hover {
@@ -995,7 +1021,7 @@ color: #756257;
 
 .catalog-filter-title {
   font-size: 20px;
-  font-weight: bold;
+  font-weight: 700;
   line-height: 26px;
   padding-bottom: 30px;
 }
@@ -1044,8 +1070,15 @@ color: #756257;
   border-radius: 50%;
 }
 
-.control-input[type="radio"] + .control-mark {
+.control-input[type="radio"]:checked + .control-mark::before {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 10px;
+  height: 10px;
+  background-color: #3f5e72;
   border-radius: 50%;
+  content: "";
 }
 
 .catalog-filter-price {
@@ -1124,20 +1157,29 @@ color: #756257;
   margin-right: 5px;
 }
 
+.button-catalog-search {
+  width: 160px;
+}
+
 .catalog-filter-input {
+  position: relative;
   width: 143px;
   height: 48px;
   padding-left: 19px;
   text-align: start;
   background-color: transparent;
   border: 2px solid #ffffff;
-  border-radius: 4px;
   appearance: textfield;
   color: #ffffff;
   font-size: 18px;
   line-height: 23px;
   border-radius: 4px 0 0 4px;
 }
+
+.catalog-filter-input:last-child {
+  border-radius: 0 4px 4px 0;
+}
+/* странно,почему применяется сразу  к двум? */
 
 .catalog-filter-input:hover {
   outline: 2px solid rgba(255, 255, 255, 0.6);
@@ -1153,9 +1195,26 @@ color: #756257;
   outline: 2px solid #ffffff;
 }
 
+.catalog-filter-input-text {
+  position: absolute;
+  font-size: 18px;
+  line-height: 23px;
+  color: rgba(255, 255, 255, 0.3);
+  right: 14px;
+  top: 50%;
+  margin-top: -12px;
+}
+
+/* ну куда они делись???*/
+
+.range-wrapper-inputs {
+
+}
+
 .catalog-search-container {
   width: 160px;
   margin-top: 34px;
+  margin-right: 72px;
 }
 
 .button-catalog-search:hover {
