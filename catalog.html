@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <title>HTML Academy: Седона</title>
   <link rel="stylesheet" href="styles/styles.css">
+  <link rel="icon" href="favicon.ico"> <!-- 32×32 -->
 </head>
 
 <body class="body-container">
@@ -120,18 +121,21 @@
                 <label class="control">
                   <input class="visually-hidden control-input" type="radio" name="type of housing" value="hotel"
                     checked>
+                  <span class="control-mark"></span>
                   <span class="control-label">Гостиница</span>
                 </label>
               </li>
               <li class="catalog-filter-item">
                 <label class="control">
                   <input class="visually-hidden control-input" type="radio" name="type of housing" value="motel">
+                  <span class="control-mark"></span>
                   <span class="control-label">Мотель</span>
                 </label>
               </li>
               <li class="catalog-filter-item">
                 <label class="control">
                   <input class="visually-hidden control-input" type="radio" name="type of housing" value="apartments">
+                  <span class="control-mark"></span>
                   <span class="control-label">Апартаменты</span>
                 </label>
               </li>
@@ -143,14 +147,18 @@
             </legend>
             <div class="range">
               <div class="range-wrapper-inputs">
-                <label class="catalog-filter-label">
-                  <input class="catalog-filter-input" type="number" value="0" name="min-price">
-                </label>
-                <span class="catalog-filter-input-text">от</span>
-                <label class="catalog-filter-label">
-                  <input class="catalog-filter-input" type="number" value="9000" name="max-price">
-                </label>
-                <span class="catalog-filter-input-text">до</span>
+                <div class="catalog-filter-form">
+                  <label class="catalog-filter-label">
+                    <input class="catalog-filter-input" type="number" value="0" name="min-price">
+                    <span class="catalog-filter-input-text">от</span>
+                  </label>
+                </div>
+                <div class="catalog-filter-form">
+                  <label class="catalog-filter-label">
+                    <input class="catalog-filter-input" type="number" value="9000" name="max-price">
+                    <span class="catalog-filter-input-text">до</span>
+                  </label>
+                </div>
               </div>
             </div>
             <div class="range-scale">
@@ -353,7 +361,7 @@
 
     <section class="mailing mailing-blank">
       <h2 class="mailing-title">Подпишитесь на рассылку</h2>
-      <p class="mailing-text"> Только полезная информация и никакого спама,честное бойскаутское!</p>
+      <p class="mailing-text"> Только полезная информация и никакого спама,<br>честное бойскаутское!</p>
       <form class="mailing-form" action="" method="post">
         <label class="visually-hidden" for="mailing-email">Email</label>
         <input class="field" placeholder="Ваш e-mail" type="email" name="mailing-email" id="mailing-email" required>

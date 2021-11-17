@@ -192,8 +192,8 @@ html {
 
 .popover {
   position: absolute;
-  top: 51px;
-  right: -120px;
+  top: 47px;
+  right: -180px;
   z-index: 1;
   width: 400px;
   color: #000000;
@@ -201,9 +201,20 @@ html {
   min-height: 186px;
   box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
   border-radius: 20px;
+  border: 1px solid #e6e6e6;
   display: none;
-  background-image: url(../image/popover_part.svg);
-  background-position: top;
+}
+
+.popover::before {
+  position: absolute;
+  content: "";
+  width: 19px;
+  height: 9px;
+  right: 0;
+  left: 0;
+  background-image: url("../image/triangle-white.svg");
+  margin: 0 auto;
+  bottom: 100%;
 }
 
 .popover-open {
@@ -217,13 +228,14 @@ html {
 .cart-items-list {
   padding-top: 25px;
   padding-right: 25px;
-  padding-bottom: 26px;
+  padding-bottom: 5px;
   padding-left: 25px;
 }
 
 .cart-item {
   display: grid;
-  grid-template-columns: 290px 20px;
+  grid-template-columns: 290px 1fr;
+  row-gap: 10px;
 }
 
 .cart-image {
@@ -233,13 +245,32 @@ html {
 }
 
 .cart-item-button {
+  width: 36px;
+  height: 36px;
   grid-row: 1 / 3;
   grid-column: 2 / 3;
-  padding: 0;
+  margin-top: -30px;
   align-self: center;
   justify-self: right;
   background-color: transparent;
   border: none;
+  margin-right: 0;
+  color: rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+}
+
+.cart-item-button:hover {
+  color: rgba(0, 0, 0, 1);
+}
+
+.cart-item-button:focus {
+  outline: 3px solid #83b3d3;
+  border-radius: 10px;
+}
+
+.cart-item-button:active {
+  outline: none;
+  color: rgba(0, 0, 0, 0.3);
 }
 
 .cart-item-link {
@@ -248,9 +279,26 @@ html {
   grid-template-rows: 24px 24px;
   outline: none;
   text-decoration: none;
-  color: #000000;
+  color: rgba(0, 0, 0, 1);
   margin-bottom: 25px;
 }
+
+.cart-item-link:hover {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.cart-item-link:focus {
+  color: rgba(0, 0, 0, 1);
+  outline: 3px solid #83b3d3;
+  border-radius: 10px;
+}
+
+.cart-item-link:active {
+  color: rgba(0, 0, 0, 0.3);
+  outline: none;
+}
+
+/* не затрагивается картинка и мотель при состояниях */
 
 .cart-item-title {
   font-size: 18px;
@@ -272,14 +320,28 @@ html {
 }
 
 .button-popover {
-  display: grid;
-  grid-column: 1 / 3;
+  display: block;
   background-color: #756257;
   border-radius:  0 0 20px 20px;
   min-width: 400px;
   min-height: 60px;
   text-align: center;
   font-size: 16px;
+  padding-top: 20px;
+}
+
+.button-popover:hover {
+  background-color: #615048;
+}
+
+.button-popover:focus {
+  outline: 3px solid #83b3d3;
+  outline-offset: -3px;
+}
+
+.button-popover:active {
+  outline: none;
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .main-container {
@@ -597,13 +659,14 @@ color: #756257;
 }
 
 .modal-container {
+  display: flex;
   position: fixed;
   top: 0;
   left: 0;
-  display: grid;
   width: 100%;
   height: 100%;
   background-color: rgba(242, 242, 242, 0.8);
+  display: none;
 }
 
 .modal {
@@ -620,14 +683,13 @@ color: #756257;
 
 .modal-search-hotel {
   width: 715px;
-  display: grid;
 }
 
 .modal-close-button {
   position: absolute;
   padding: 0;
-  top: 0;
-  right: 0;
+  top: 54px;
+  right: 70px;
   width: 53px;
   height: 53px;
   background-color: transparent;
@@ -638,8 +700,31 @@ color: #756257;
   cursor: pointer;
 }
 
+.modal-close-button:hover {
+  fill: #e6e6e6;
+}
+
+.modal-close-button:focus {
+  outline: 3px solid #83b3d3;
+  border-radius: 50%;
+}
+
+.modal-close-button:active {
+  outline: none;
+  color: rgba(230, 230, 230, 0.6);
+}
+
+/* картинка не подсвечивается, как и в попапе */
+
 .field-group {
+  display: grid;
+  grid-template-columns: 155px 1fr;
   margin: 0;
+  grid-template-rows: min-content 30px;
+}
+
+.field-group-date {
+  grid-column: 1 / -1;
 }
 
 .modal-title {
@@ -652,8 +737,9 @@ color: #756257;
 }
 
 .arrival-form {
-  grid-template-columns: 155px 420px;
-  grid-template-rows: min-content min-content 1fr;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 11px;
 }
 
 .arrival-form-children {
@@ -661,17 +747,63 @@ color: #756257;
 }
 
 .info {
-    position: absolute;
-    width: 25px;
-    height: 25px;
-    padding: 0;
-    margin-right: 18px;
-    background-color: transparent;
-    border: none;
-    background-image: url("../image/");
-    background-repeat: no-repeat;
-    background-position: center;
-  }
+  margin-right: 18px;
+  margin-left: 10px;
+  position: relative;
+}
+
+.info-button {
+  width: 25px;
+  height: 25px;
+  padding: 0;
+  background-color: #83b3d3;
+  border-radius: 50%;
+  border: none;
+  background-image: url("../image/icon/info.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+}
+
+.info-button:hover {
+  background-color: #68a2ca;
+}
+
+.info-text {
+  position: absolute;
+  color: #FFFFFF;
+  width: 256px;
+  background-color: #333333;
+  top: 40px;
+  left: 50%;
+  margin-left: -128px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  text-align: left;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  padding: 15px 18px 18px 22px;
+  display: block;
+}
+
+.info-text::before {
+  position: absolute;
+  content: "";
+  width: 19px;
+  height: 9px;
+  right: 0;
+  left: 0;
+  background-image: url("../image/triangle-black.svg");
+  margin: 0 auto;
+  bottom: 100%;
+}
+
+.calendar {
+  background-image: url("../image/modal-calendar.svg");
+  background-repeat: no-repeat;
+  background-position: right 17px center;
+}
 
 .field-modal {
   background-color: #f2f2f2;
@@ -682,7 +814,36 @@ color: #756257;
   font-weight: bold;
   font-size: 18px;
   line-height: 40px;
-  font-family: PT Sans;
+  font-family: "PT Sans", sans-serif;
+  width: 100%;
+  padding-left: 19px;
+}
+
+.field-modal:hover {
+  background-color: #e6e6e6;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.field-modal:focus {
+  outline: 3px solid #83b3d3;
+}
+
+.field-modal:active {
+  background-color: #ffffff;
+  outline: 2px solid #000000;
+  color: rgba(0, 0, 0, 1);
+}
+
+.field-text {
+  grid-column: 2 / 3;
+  align-self: center;
+  font-size: 16px;
+  line-height: 40px;
+  color: #333333;
+}
+
+.field-text-error {
+  color: #ff5757;
 }
 
 .button-modal {
@@ -691,6 +852,83 @@ color: #756257;
   font-weight: bold;
   font-size: 20px;
   line-height: 40px;
+  grid-column: 1 / -1;
+}
+
+.button-modal:hover {
+  background-color: #68a2ca;
+}
+
+.button-modal:focus {
+  outline: 3px solid #756257;
+}
+
+.button-modal:active {
+  outline: none;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.counter {
+  position: relative;
+}
+
+.decrease, .increase {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border-radius: 4px;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  top: 50%;
+  margin-top: -12px;
+  opacity: 0.3;
+}
+
+.decrease {
+  background-image: url(../image/icon/min.svg);
+  left: 13px;
+}
+
+.increase {
+  background-image: url(../image/icon/max.svg);
+  right: 13px;
+}
+
+.decrease, .increase:hover {
+  color: rgba(0, 0, 0, 1);
+}
+
+.decrease, .increase:focus {
+  outline: 3px solid #83b3d3;
+  border-radius: 4px;
+}
+
+.decrease, .increase:active {
+  outline: none;
+}
+
+/* не нажимаются, проверить не могу */
+
+.counter .field-modal {
+  padding-left: 45px;
+  padding-right: 45px;
+  text-align: center;
+  color: #000000;
+}
+
+.field-label {
+  display: flex;
+  align-items: center;
+  align-self: center;
+  font-size: 18px;
+  line-height: 40px;
+  font-weight: 700;
+}
+
+.arrival-form-children .field-label {
+  justify-content: flex-end;
 }
 
 /* button */
@@ -794,6 +1032,7 @@ color: #756257;
   padding-left: 10px;
   padding-right: 10px;
   border-radius: 4px;
+  width: 160px;
 }
 
 .button-reset:hover {
@@ -803,6 +1042,7 @@ color: #756257;
 .button-reset:focus {
   outline: 3px solid #83b3d3;
   border-radius: 4px;
+  outline-offset: -3px;
 }
 
 .button-reset:active {
@@ -903,7 +1143,7 @@ color: #756257;
 
 .catalog-filter-title {
   font-size: 20px;
-  font-weight: bold;
+  font-weight: 700;
   line-height: 26px;
   padding-bottom: 30px;
 }
@@ -952,8 +1192,15 @@ color: #756257;
   border-radius: 50%;
 }
 
-.control-input[type="radio"] + .control-mark {
+.control-input[type="radio"]:checked + .control-mark::before {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 10px;
+  height: 10px;
+  background-color: #3f5e72;
   border-radius: 50%;
+  content: "";
 }
 
 .catalog-filter-price {
@@ -1032,6 +1279,10 @@ color: #756257;
   margin-right: 5px;
 }
 
+.button-catalog-search {
+  width: 160px;
+}
+
 .catalog-filter-input {
   width: 143px;
   height: 48px;
@@ -1039,13 +1290,17 @@ color: #756257;
   text-align: start;
   background-color: transparent;
   border: 2px solid #ffffff;
-  border-radius: 4px;
   appearance: textfield;
   color: #ffffff;
   font-size: 18px;
   line-height: 23px;
   border-radius: 4px 0 0 4px;
 }
+
+.catalog-filter-label:last-child .catalog-filter-input {
+  border-radius: 0 4px 4px 0;
+}
+/* не получилось */
 
 .catalog-filter-input:hover {
   outline: 2px solid rgba(255, 255, 255, 0.6);
@@ -1061,9 +1316,24 @@ color: #756257;
   outline: 2px solid #ffffff;
 }
 
+.catalog-filter-form {
+  position: relative;
+}
+
+.catalog-filter-input-text {
+  position: absolute;
+  font-size: 18px;
+  line-height: 23px;
+  color: rgba(255, 255, 255, 0.3);
+  right: 20px;
+  top: 50%;
+  margin-top: -12px;
+}
+
 .catalog-search-container {
   width: 160px;
   margin-top: 34px;
+  margin-right: 72px;
 }
 
 .button-catalog-search:hover {
