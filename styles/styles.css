@@ -106,7 +106,7 @@ html {
 .navigation-link {
   display: block;
   position: relative;
-  padding: 6px 12px;
+  padding: 7px 16px 10px 16px;
   font-size: 20px;
   line-height: 26px;
   font-weight: bold;
@@ -298,8 +298,6 @@ html {
   outline: none;
 }
 
-/* не затрагивается картинка и мотель при состояниях */
-
 .cart-item-title {
   font-size: 18px;
   font-weight: 700;
@@ -385,7 +383,7 @@ html {
   font-weight: 400;
   font-size: 22px;
   text-align: center;
-  margin: 0 240px 79px;
+  margin: 35px 240px 80px 240px;
 }
 
 .advantages-list {
@@ -413,13 +411,13 @@ html {
   font-size: 24px;
   font-weight: bold;
   text-transform: uppercase;
-  margin: 0 0 25px;
+  margin: 0 0 27px;
 }
 
 .advantages-description {
   line-height: 21px;
   font-size: 18px;
-  margin: 26px 0 0;
+  margin: 30px 0 0;
 }
 
 .features-list {
@@ -455,7 +453,7 @@ html {
 .advantages-item {
   display: block;
   margin: 0;
-  padding: 98px 75px 77px;
+  padding: 98px 75px 77px 75px;
   background-color: rgba(131, 179, 211, 0.12);
   list-style-type: none;
   width: 400px;
@@ -467,7 +465,7 @@ html {
 
 .search {
   margin: 0;
-  padding: 91px 240px 91px;
+  padding: 91px 240px 91px 240px;
   text-align: center;
   color: #000000;
   background-color: #ffffff;
@@ -714,8 +712,6 @@ color: #756257;
   color: rgba(230, 230, 230, 0.6);
 }
 
-/* картинка не подсвечивается, как и в попапе */
-
 .field-group {
   display: grid;
   grid-template-columns: 155px 1fr;
@@ -909,8 +905,6 @@ color: #756257;
   outline: none;
 }
 
-/* не нажимаются, проверить не могу */
-
 .counter .field-modal {
   padding-left: 45px;
   padding-right: 45px;
@@ -932,7 +926,6 @@ color: #756257;
 }
 
 /* button */
-
 
 .button-secondary {
   background-color: #756257;
@@ -1300,7 +1293,6 @@ color: #756257;
 .catalog-filter-label:last-child .catalog-filter-input {
   border-radius: 0 4px 4px 0;
 }
-/* не получилось */
 
 .catalog-filter-input:hover {
   outline: 2px solid rgba(255, 255, 255, 0.6);
@@ -1569,7 +1561,6 @@ color: #756257;
   width: 625px;
   height: 55px;
   margin: 31px auto 30px;
-
 }
 
 .pagination-container {
