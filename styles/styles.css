@@ -398,12 +398,14 @@ html {
   display: flex;
   background-color: #83b3d3;
   color: #ffffff;
+  flex-wrap: wrap;
 }
 
 .advantages-item-picture-container {
   display: block;
   padding: 98px 90px 77px;
   margin: 0;
+  width: 400px;
 }
 
 .advantages-title {
@@ -425,6 +427,8 @@ html {
   margin: 0;
   padding: 0;
   list-style-type: none;
+  width: 100%;
+  background-color: #ffffff;
 }
 
 .features-item {
@@ -432,6 +436,7 @@ html {
   padding: 89px 75px 79px;
   margin: 0;
   background-color: rgba(131, 179, 211, 0.12);
+  width: 400px;
 }
 
 .features-item:nth-child(even) {
@@ -444,10 +449,12 @@ html {
   font-weight: bold;
   line-height: 28px;
   text-transform: uppercase;
+  color: #000000;
 }
 
 .features-description {
   margin: 20px 0 0;
+  color: #333333;
 }
 
 .advantages-item {
